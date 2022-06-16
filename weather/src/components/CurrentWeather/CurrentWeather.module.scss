@@ -1,9 +1,7 @@
 @use "../../styles/variables" as *;
 
-.box {
+.weather_box {
   background: $baby_blue;
-  //   background: linear-gradient(to bottom, $bg_light_blue, $bg_blue) fixed;
-
   height: 20rem;
   //   width: 60rem;
 
@@ -12,9 +10,6 @@
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
 
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
 }
 
 .icon_container {
@@ -23,13 +18,22 @@
   top: -25%;
 }
 
+.weather_box_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
 .test {
-  // background: red;
+  background: #aea;
 }
 
 @media (max-width: 760px) {
-  .box {
+  .weather_box {
     height: 40rem;
+  }
+
+  .weather_box_grid {
     grid-template-columns: 1fr;
   }
 
