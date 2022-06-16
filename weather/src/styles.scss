@@ -8,20 +8,21 @@
 
 // html,
 // body {
-//   overflow: hidden;
+//   overflow-x: hidden;
 // }
 
 body {
+  padding: 1.25rem;
+  width: 60rem;
+  margin: 0 auto;
+  // min-height: 100vh;
+  background: linear-gradient(to bottom, $bg_light_blue, $bg_blue) fixed;
+}
+
+.app {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  padding: 50px;
-  // justify-content: center;
-  // align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
-  min-height: 100vh;
-  background: linear-gradient(to bottom, $bg_light_blue, $bg_blue) fixed;
+  gap: 100px;
 }
 
 @keyframes float {

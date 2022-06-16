@@ -1,0 +1,10 @@
+@use "../../styles/variables" as *;
+
+.search_bar {
+  background: $baby_blue;
+  height: 3rem;
+
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+}
