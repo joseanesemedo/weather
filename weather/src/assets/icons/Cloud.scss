@@ -1,0 +1,57 @@
+@import "../../styles/variables";
+
+.icon__cloud {
+  width: 18rem;
+  height: 12rem;
+  background: rgba(225, 225, 225, 0.8);
+  opacity: 1;
+  // backdrop-filter: blur(0px);
+  clip-path: url(#cloud-path);
+  box-shadow: inset 0rem -1.3rem 0.25rem -1rem rgba(255, 255, 255, 0.8),
+    inset 0rem 0rem 5rem 0rem rgba(255, 255, 255, 0.4);
+
+  transform: scale(1.2);
+
+  .icon__cloud_reflect {
+    height: 12rem;
+    width: 11.9rem;
+    border-radius: 50%;
+    box-shadow: inset 0rem -1.1rem 0.25rem -1rem rgba(255, 255, 255, 0.7),
+      inset 0.45rem 0rem 0.25rem -0.25rem rgba(255, 255, 255, 0.7),
+      inset -0.45rem 0.5rem 0.25rem -0.45em rgba(255, 255, 255, 0.7),
+      inset 0.25rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0%, 100% 33%, 50% 30%, 50% 100%, 0% 100%);
+  }
+
+  .icon__cloud_reflect_2 {
+    position: absolute;
+    width: 8.7rem;
+    height: 8.7rem;
+    bottom: 0.1rem;
+    right: 0.5rem;
+
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 100%, 29% 0%);
+  }
+
+  .icon__cloud_svg clipPath {
+    transform: scale(0.65);
+  }
+
+  .icon__shadow {
+    position: absolute;
+    left: 30rem;
+    top: -25rem;
+    width: 18rem;
+    height: 9rem;
+    border-radius: 50%;
+    box-shadow: -36rem 38rem 7rem #4077b2;
+  }
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .icon__cloud {
+    background: rgba(225, 225, 225, 0.5);
+    -webkit-backdrop-filter: blur(0.5625rem);
+    backdrop-filter: blur(0.5625rem);
+  }
+}
