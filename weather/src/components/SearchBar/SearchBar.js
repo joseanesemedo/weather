@@ -5,6 +5,7 @@ import classes from "./SearchBar.module.scss";
 import { FaSearch } from "react-icons/fa";
 
 const SearchBar = (props) => {
+  const [data, setData] = useState({});
   const [location, setLocation] = useState("");
   const [error, setError] = useState("");
 
@@ -16,13 +17,14 @@ const SearchBar = (props) => {
         .get(url)
         .then((response) => {
           setError("");
-
-          props.onSearchData(response.data);
+          setData(response.data);
         })
         .catch((error) => {
           setError("Not found");
         });
     }
+
+    props.onSearchData(data, error);
   };
 
   return (
