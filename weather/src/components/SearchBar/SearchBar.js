@@ -22,9 +22,8 @@ const SearchBar = (props) => {
         .catch((error) => {
           setError("Not found");
         });
+      props.onSearchData(data, error);
     }
-
-    props.onSearchData(data, error);
   };
 
   return (
