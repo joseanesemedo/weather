@@ -10,16 +10,12 @@ const CurrentWeather = (props) => {
 
   return (
     <div className={classes.weather_box}>
-      {/* <div className={classes.icon_container}> */}
-      <div className={classes.weather_box_grid}>
-        <div className={classes.test}>
-          {data.name}
-          {data.weather ? <h2>{data.weather[0].description}</h2> : null}
-        </div>
-        <div className={classes.icon_container}>
-          {/* {" "}
-          <PartlyCloudy />{" "} */}
-        </div>
+      <div className={classes.weather_info}>
+        <div className={classes.city_name}>{data.name}</div>
+        {data.weather ? <h2>{data.weather[0].description}</h2> : null}
+      </div>
+      <div className={classes.icon_container}>
+        <PartlyCloudy />
       </div>
     </div>
   );
