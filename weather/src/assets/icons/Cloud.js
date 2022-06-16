@@ -3,7 +3,7 @@ import "./Cloud.scss";
 
 const Cloud = (props) => {
   return (
-    <div className={`${props.className}`}>
+    <div className={`container ${props.className}`}>
       <div className="icon__cloud">
         <div className="icon__cloud_reflect"></div>
         <div className={`icon__cloud_reflect icon__cloud_reflect_2`}></div>

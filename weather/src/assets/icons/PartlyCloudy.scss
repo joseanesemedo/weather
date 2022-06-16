@@ -1,3 +1,4 @@
+@use "../../styles/mixins" as *;
 @import "../../styles/variables";
 
 .container {
@@ -11,12 +12,6 @@
   }
 
   .icon__shadow {
-    position: absolute;
-    left: 30rem;
-    top: -25rem;
-    width: 18rem;
-    height: 9rem;
-    border-radius: 50%;
-    box-shadow: -36rem 38rem 7rem darken($bg_blue, 20%);
+    @include shadow;
   }
 }

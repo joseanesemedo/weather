@@ -5,7 +5,7 @@ import Cloud from "./assets/icons/Cloud";
 function App() {
   return (
     <div className="App">
-      <PartlyCloudy className="float" />
+      <PartlyCloudy />
     </div>
   );
 }
