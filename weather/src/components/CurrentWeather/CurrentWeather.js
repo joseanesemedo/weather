@@ -11,7 +11,10 @@ const CurrentWeather = () => {
       {/* <div className={classes.icon_container}> */}
       <div className={classes.weather_box_grid}>
         <div className={classes.test}>dsd dsds sdsdd sdsdsdsdasd s</div>
-        <div className={classes.icon_container}>{/* <PartlyCloudy /> */}</div>
+        <div className={classes.icon_container}>
+          {" "}
+          <PartlyCloudy />{" "}
+        </div>
       </div>
     </div>
   );
