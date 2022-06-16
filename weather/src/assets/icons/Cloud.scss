@@ -1,5 +1,5 @@
 @use "../../styles/mixins" as *;
-@import "../../styles/variables";
+@use "../../styles/variables" as *;
 
 .container {
   position: relative;
@@ -47,7 +47,7 @@
   }
 }
 
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+@supports ((-webkit-backdrop-filter: blur(0.5625rem)) or (backdrop-filter: blur(0.5625rem))) {
   .icon__cloud {
     background: rgba(225, 225, 225, 0.5);
     -webkit-backdrop-filter: blur(0.5625rem);

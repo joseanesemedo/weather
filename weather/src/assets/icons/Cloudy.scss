@@ -1,1 +1,16 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as *;
+
+.container {
+  position: relative;
+
+  .mini_cloud {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: scale(0.7) rotateY(180deg);
+    z-index: 10;
+  }
+
+  .icon__shadow {
+  }
+}

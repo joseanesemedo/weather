@@ -23,7 +23,7 @@ const Cloud = (props) => {
           </clipPath>
         </svg>
       </div>
-      <div className="icon__shadow"></div>
+      {/* <div className="icon__shadow"></div> */}
     </div>
   );
 };
