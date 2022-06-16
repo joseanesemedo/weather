@@ -8,11 +8,7 @@ import Cloud from "../../assets/icons/Cloud";
 const CurrentWeather = () => {
   return (
     <div className={classes.box}>
-      {/* <div className={classes.icon_container}> */}
-      <div className={classes.grid}>
-        <div className={classes.test}>dsd</div>
-        <div className={classes.test}>ss{/* <PartlyCloudy /> */}</div>
-      </div>
+      <div className={classes.icon_container}></div>
     </div>
   );
 };

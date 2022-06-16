@@ -8,14 +8,34 @@
   //   width: 60rem;
 
   border-radius: 25px;
-  padding: 10px;
+  padding: 40px;
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
 
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .icon_container {
   position: absolute;
   right: 20%;
   top: -25%;
+}
+
+.test {
+  // background: red;
+}
+
+@media (max-width: 760px) {
+  .box {
+    height: 40rem;
+    grid-template-columns: 1fr;
+  }
+
+  .icon_container {
+    position: absolute;
+    right: 15%;
+    top: -10%;
+  }
 }
