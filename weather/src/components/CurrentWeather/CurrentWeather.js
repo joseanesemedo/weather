@@ -7,6 +7,13 @@ import Cloud from "../../assets/icons/Cloud";
 
 const CurrentWeather = (props) => {
   const { data, error } = props;
+  // console.log(data.weather.icon);
+
+  const test = () => {
+    return (
+      <div>{data.weather.icon === "02d" ? <PartlyCloudy /> : <Sun />}</div>
+    );
+  };
 
   return (
     <div className={classes.weather_box}>
@@ -18,9 +25,13 @@ const CurrentWeather = (props) => {
 
       <div className={classes.weather_info}>
         <h1 className={classes.city_name}>{data.name}</h1>
-        {error ? <h2>Error</h2> : <></>}
-        {data.weather ? <h2>{data.weather[0].description}</h2> : null}
-        {data.main ? <h2>{data.main.temp.toFixed()}º</h2> : null}
+        {/* {error ? <h2>Error</h2> : <></>} */}
+        <div className={classes.weather_description}>
+          {data.weather ? <h2>{data.weather[0].description}</h2> : null}
+        </div>
+        <div className={classes.temperature}>
+          {data.main ? <h2>{data.main.temp.toFixed()}º</h2> : null}
+        </div>
       </div>
     </div>
   );

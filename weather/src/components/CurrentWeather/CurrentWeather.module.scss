@@ -6,12 +6,12 @@
   //   width: 60rem;
 
   border-radius: 25px;
-  padding: 40px;
+  padding: 0.625rem;
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
   position: relative;
 
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
 
   .city_info {
@@ -20,7 +20,7 @@
 
     .icon_container {
       position: absolute;
-      left: 20%;
+      left: 15%;
       top: -10%;
     }
   }
@@ -29,13 +29,25 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 0 1.25rem;
+    padding: 0 20px;
     background-color: #aea;
 
     .city_name {
       color: $title_color;
       font-size: 2.5rem;
       font-weight: 600;
+    }
+
+    .weather_description {
+      color: $black;
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+
+    .temperature {
+      color: $title_color;
+      font-size: 3rem;
+      font-weight: 500;
     }
   }
 }
