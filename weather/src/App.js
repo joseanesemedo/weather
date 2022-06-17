@@ -1,4 +1,4 @@
-import "./styles.scss";
+import "./styles/styles.scss";
 
 import SearchBar from "./components/SearchBar/SearchBar";
 import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
@@ -25,11 +25,13 @@ function App() {
   }
 
   return (
-    <div className="app" style={{ backgroundColor: test }}>
+    <div className="app">
+      {/* <div className="background">
+        <h1 className="text">swdsd</h1>
+      </div> */}
       <Header />
       <SearchBar onSearchData={addData} />
       <CurrentWeather data={data} error={error} />
-      {test}
     </div>
   );
 }

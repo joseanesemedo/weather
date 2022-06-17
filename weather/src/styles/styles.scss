@@ -1,4 +1,5 @@
-@import "./styles/variables";
+@use "./variables" as *;
+@import "./base/reset";
 
 * {
   margin: 0;
@@ -15,7 +16,7 @@ body {
   width: 68.75rem;
   margin: 0 auto;
   min-height: 100vh;
-  background: url(./assets/Clouds-200s.svg) repeat,
+  background: url(../assets/Clouds-200s.svg) repeat,
     linear-gradient(to bottom, $bg_light_blue, $bg_blue) fixed;
   background-size: auto;
 

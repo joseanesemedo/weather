@@ -1,0 +1,22 @@
+@use "../abstracts/colors" as *;
+
+.light {
+  .text {
+    color: $black;
+  }
+  .background {
+    background: $white;
+  }
+}
+
+.dark {
+  .text {
+    color: $white;
+  }
+  .background {
+    background: $black;
+  }
+}
+
+// .custom {
+// }
