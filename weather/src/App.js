@@ -14,11 +14,22 @@ function App() {
     setError(error);
   };
 
+  let test;
+  var t = new Date().getHours();
+  if (t < 10) {
+    test = "red";
+  } else if (t < 20) {
+    test = "#aea";
+  } else {
+    test = "blue";
+  }
+
   return (
-    <div className="app">
+    <div className="app" style={{ backgroundColor: test }}>
       <Header />
       <SearchBar onSearchData={addData} />
       <CurrentWeather data={data} error={error} />
+      {test}
     </div>
   );
 }

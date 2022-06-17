@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 
 .weather_box {
-  background: $baby_blue;
+  background: $bg_light_blue;
   height: 15rem;
   //   width: 60rem;
 
@@ -31,6 +31,12 @@
     gap: 1rem;
     padding: 0 20px;
 
+    .temperature {
+      color: $title_color;
+      font-size: 5rem;
+      font-weight: 500;
+    }
+
     .description_container {
       display: flex;
       flex-direction: column;
@@ -46,12 +52,6 @@
         font-size: 2rem;
         text-transform: capitalize;
       }
-    }
-
-    .temperature {
-      color: $title_color;
-      font-size: 5rem;
-      font-weight: 500;
     }
   }
 }
