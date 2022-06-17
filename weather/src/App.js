@@ -14,15 +14,15 @@ function App() {
     setError(error);
   };
 
-  let test;
-  var t = new Date().getHours();
-  if (t < 10) {
-    test = "red";
-  } else if (t < 20) {
-    test = "#aea";
-  } else {
-    test = "blue";
-  }
+  // let test;
+  // var t = new Date().getHours();
+  // if (t < 10) {
+  //   test = "red";
+  // } else if (t < 20) {
+  //   test = "#aea";
+  // } else {
+  //   test = "blue";
+  // }
 
   return (
     <div className="app">
