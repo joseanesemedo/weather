@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import classes from "./SearchBar.module.scss";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaSearchLocation } from "react-icons/fa";
 
 const SearchBar = (props) => {
   const [data, setData] = useState({});
@@ -33,12 +33,13 @@ const SearchBar = (props) => {
     <div className={classes.search_bar}>
       <FaSearch className={classes.icon} />
       <input
-        type={"text"}
+        type="text"
         placeholder="Search for location..."
         value={location}
         onChange={(event) => setLocation(event.target.value)}
         onKeyDown={searchLocation}
       ></input>
+      <FaSearchLocation className={classes.icon} />
     </div>
   );
 };

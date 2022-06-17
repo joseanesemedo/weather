@@ -21,13 +21,13 @@
   input {
     width: 100%;
     font-size: 1.4rem;
-    color: $text_color;
+    color: $title_color;
     border: none;
     background: transparent;
 
     &::placeholder {
       font-size: 1.2rem;
-      color: $title_color;
+      color: $text_color;
     }
 
     &:focus {

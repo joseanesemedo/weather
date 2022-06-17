@@ -9,11 +9,11 @@ const CurrentWeather = (props) => {
   const { data, error } = props;
   // console.log(data.weather.icon);
 
-  const test = () => {
-    return (
-      <div>{data.weather.icon === "02d" ? <PartlyCloudy /> : <Sun />}</div>
-    );
-  };
+  // const test = () => {
+  //   return (
+  //     <div>{data.weather.icon === "02d" ? <PartlyCloudy /> : <Sun />}</div>
+  //   );
+  // };
 
   return (
     <div className={classes.weather_box}>
