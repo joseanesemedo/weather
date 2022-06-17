@@ -6,16 +6,12 @@
   box-sizing: border-box;
 }
 
-// html,
-// body {
-// }
-
 body {
   overflow-x: hidden;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 
-  padding: 2.5rem;
+  padding: 1.25rem 2.5rem;
   width: 68.75rem;
   margin: 0 auto;
   // height: 100vh;
@@ -32,16 +28,16 @@ body::-webkit-scrollbar {
   gap: 1.6rem;
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(-5px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-}
+// @keyframes float {
+//   0%,
+//   100% {
+//     transform: translateY(-5px);
+//   }
+//   50% {
+//     transform: translateY(10px);
+//   }
+// }
 
-.float {
-  animation: float 3s linear infinite;
-}
+// .float {
+//   animation: float 3s linear infinite;
+// }
