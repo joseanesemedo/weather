@@ -6,24 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  overflow-x: hidden;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-
-  padding: 1.25rem 2.5rem;
-  width: 68.75rem;
-  margin: 0 auto;
-  min-height: 100vh;
-  background: url(../assets/Clouds-200s.svg) repeat,
-    linear-gradient(to bottom, $bg_light_blue, $bg_blue) fixed;
-  background-size: auto;
-
-  &::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-  }
-}
-
 // @media (max-width: 760px) {
 //   body {
 //     background: url(./assets/Clouds-200s.svg) repeat,
@@ -31,11 +13,11 @@ body {
 //   }
 // }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
+// .app {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1.6rem;
+// }
 
 // @keyframes float {
 //   0%,

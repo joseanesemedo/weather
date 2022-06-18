@@ -1,0 +1,27 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.home {
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
+  padding: 1.25rem 2.5rem;
+
+  // TODO change body to .app and remove width
+  //   width: 68.75rem;
+  //   margin: 0 auto;
+  min-height: 100vh;
+  @include themify("background", "background_color");
+
+  background-size: auto;
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  //   div {
+  //     width: 68.75rem;
+  //     margin: 0 auto;
+  //   }
+}

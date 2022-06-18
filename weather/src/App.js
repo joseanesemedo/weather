@@ -1,19 +1,13 @@
 import "./styles/styles.scss";
 
-import SearchBar from "./components/SearchBar/SearchBar";
-import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
-import Header from "./components/Header/Header";
-import { useState } from "react";
+import ThemeContextParent, {
+  DAY_THEME,
+  NIGHT_THEME,
+} from "./ThemeContextParent";
+
+import Home from "./components/Home/Home";
 
 function App() {
-  const [data, setData] = useState({});
-  const [error, setError] = useState("");
-
-  const addData = (data) => {
-    setData(data);
-    setError(error);
-  };
-
   // let test;
   // var t = new Date().getHours();
   // if (t < 10) {
@@ -25,14 +19,9 @@ function App() {
   // }
 
   return (
-    <div className="app">
-      {/* <div className="background">
-        <h1 className="text">swdsd</h1>
-      </div> */}
-      <Header />
-      <SearchBar onSearchData={addData} />
-      <CurrentWeather data={data} error={error} />
-    </div>
+    <ThemeContextParent>
+      <Home></Home>
+    </ThemeContextParent>
   );
 }
 

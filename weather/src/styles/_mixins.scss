@@ -1,5 +1,19 @@
 @use "./variables" as *;
+@import "./day.scss";
+@import "./night.scss";
 
+$themes: (
+  day: $day,
+  night: $night,
+);
+
+@mixin themify($property, $key) {
+  @each $theme, $color in $themes {
+    &.#{$theme} {
+      #{$property}: map-get($color, $key);
+    }
+  }
+}
 @mixin shadow {
   position: absolute;
   left: 30rem;
