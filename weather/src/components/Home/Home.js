@@ -7,11 +7,11 @@ import TemperatureDetails from "../TemperatureDetails/TemperatureDetails";
 import Forecast from "../Forecast/Forecast";
 
 import { ThemeContext } from "../../ThemeContextParent";
-import getWeatherData from "../../assets/weatherService";
+import getFormattedWeatherData from "../../assets/weatherService";
 
 const Home = () => {
   const fetchWeather = async () => {
-    const data = await getWeatherData("weather", { q: "praia" });
+    const data = await getFormattedWeatherData({ q: "praia" });
     console.log(data);
   };
 
