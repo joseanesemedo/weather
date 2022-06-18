@@ -10,9 +10,9 @@ const ThemeSwitcher = () => {
   const { setGlobalTheme } = useContext(ThemeContext);
 
   //   var time = new Date().getHours();
-  //   if (time < 10) {
+  //   if (time < 15) {
   //     setGlobalTheme(DAY_THEME);
-  //   } else if (time < 30) {
+  //   } else if (time < 19) {
   //     setGlobalTheme(AFTERNOON_THEME);
   //   } else {
   //     setGlobalTheme(NIGHT_THEME);

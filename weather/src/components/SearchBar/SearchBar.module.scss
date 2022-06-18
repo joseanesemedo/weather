@@ -14,9 +14,19 @@
   align-items: center;
   gap: 10px;
 
-  .icon {
-    font-size: 1.2rem;
-    @include themify("color", "text_color");
+  .icon_btn {
+    @include reset_btn;
+    cursor: pointer;
+
+    .icon {
+      font-size: 1.5rem;
+      @include themify("color", "text_color");
+      transition: all 0.2s;
+
+      &:hover {
+        @include themify("color", "title_color");
+      }
+    }
   }
 
   .input {

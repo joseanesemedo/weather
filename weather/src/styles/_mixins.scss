@@ -26,3 +26,11 @@ $themes: (
   border-radius: 50%;
   box-shadow: -36rem 38rem 7rem darken($bg_light_blue, 10%);
 }
+
+@mixin reset_btn {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  margin: 0;
+  line-height: 1;
+}

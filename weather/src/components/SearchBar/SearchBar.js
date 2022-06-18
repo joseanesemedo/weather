@@ -2,7 +2,8 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 
 import classes from "./SearchBar.module.scss";
-import { FaSearch, FaSearchLocation } from "react-icons/fa";
+
+import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 
 import { ThemeContext } from "../../ThemeContextParent";
 
@@ -35,7 +36,10 @@ const SearchBar = (props) => {
 
   return (
     <div className={`${classes.search_bar} ${classes[globalTheme]}`}>
-      <FaSearch className={`${classes.icon} ${classes[globalTheme]}`} />
+      <button className={`${classes.icon_btn}`}>
+        <UilSearch className={`${classes.icon} ${classes[globalTheme]}`} />
+      </button>
+
       <input
         className={`${classes.input} ${classes[globalTheme]}`}
         type="text"
@@ -44,7 +48,12 @@ const SearchBar = (props) => {
         onChange={(event) => setLocation(event.target.value)}
         onKeyDown={searchLocation}
       ></input>
-      <FaSearchLocation className={classes.icon} />
+
+      <button className={`${classes.icon_btn}`}>
+        <UilLocationPoint
+          className={`${classes.icon} ${classes[globalTheme]}`}
+        />
+      </button>
     </div>
   );
 };

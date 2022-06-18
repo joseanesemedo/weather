@@ -56,7 +56,7 @@ const CurrentWeather = (props) => {
           </div>
         </>
       ) : (
-        <div>"dd"</div>
+        <div></div>
       )}
     </div>
   );
