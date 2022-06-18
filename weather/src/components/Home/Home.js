@@ -7,8 +7,16 @@ import TemperatureDetails from "../TemperatureDetails/TemperatureDetails";
 import Forecast from "../Forecast/Forecast";
 
 import { ThemeContext } from "../../ThemeContextParent";
+import getWeatherData from "../../assets/weatherService";
 
 const Home = () => {
+  const fetchWeather = async () => {
+    const data = await getWeatherData("weather", { q: "praia" });
+    console.log(data);
+  };
+
+  fetchWeather();
+
   const { globalTheme } = useContext(ThemeContext);
 
   const [data, setData] = useState();
@@ -28,6 +36,7 @@ const Home = () => {
         <CurrentWeather data={data} error={error} />
         <TemperatureDetails />
         <Forecast title={"Hourly Forecast"} />
+        <Forecast title={"Daily Forecast"} />
 
         {/* {data ? <CurrentWeather data={data} error={error} /> : <></>} */}
       </div>
