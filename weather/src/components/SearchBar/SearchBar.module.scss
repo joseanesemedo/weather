@@ -2,8 +2,7 @@
 @use "../../styles/mixins" as *;
 
 .search_bar {
-  // background: $baby_blue;
-  @include themify("background", "header_color");
+  @include themify("background", "searchbar_color");
   height: 3.5rem;
 
   border-radius: 50px;
@@ -17,23 +16,23 @@
 
   .icon {
     font-size: 1.2rem;
-    color: $text_color;
+    @include themify("color", "text_color");
   }
 
-  input {
+  .input {
     width: 100%;
     font-size: 1.4rem;
-    color: $title_color;
+    @include themify("color", "title_color");
     border: none;
     background: transparent;
 
     &::placeholder {
       font-size: 1.2rem;
-      color: $text_color;
+      @include themify("color", "text_color");
     }
 
     &:focus {
-      outline: red;
+      outline: transparent;
     }
   }
 }

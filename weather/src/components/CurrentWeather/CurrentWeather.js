@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import classes from "./CurrentWeather.module.scss";
 import PartlyCloudy from "../../assets/icons/PartlyCloudy";
 import Cloudy from "../../assets/icons/Cloudy";
 import Sun from "../../assets/icons/Sun";
 import Cloud from "../../assets/icons/Cloud";
+import { ThemeContext } from "../../ThemeContextParent";
 
 const CurrentWeather = (props) => {
-  const { data, error } = props;
+  const { globalTheme } = useContext(ThemeContext);
 
+  const { data, error } = props;
   const [time, setTime] = useState("");
   // console.log(data.weather.icon);
 
@@ -32,7 +34,7 @@ const CurrentWeather = (props) => {
   // };
 
   return (
-    <div className={classes.weather_box}>
+    <div className={`${classes.weather_box} ${classes[globalTheme]}`}>
       <div className={classes.weather_info}>
         <div className={classes.temperature}>
           {data.main ? <h2>{data.main.temp.toFixed()}º</h2> : null}
@@ -46,9 +48,7 @@ const CurrentWeather = (props) => {
       </div>
 
       <div className={classes.city_info}>
-        <div className={classes.icon_container}>
-          <PartlyCloudy />
-        </div>
+        <div className={classes.icon_container}>{/* <PartlyCloudy /> */}</div>
       </div>
     </div>
   );

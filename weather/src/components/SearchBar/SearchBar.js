@@ -35,8 +35,9 @@ const SearchBar = (props) => {
 
   return (
     <div className={`${classes.search_bar} ${classes[globalTheme]}`}>
-      <FaSearch className={classes.icon} />
+      <FaSearch className={`${classes.icon} ${classes[globalTheme]}`} />
       <input
+        className={`${classes.input} ${classes[globalTheme]}`}
         type="text"
         placeholder="Search for location..."
         value={location}

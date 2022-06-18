@@ -1,7 +1,9 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .weather_box {
-  background: $bg_light_blue;
+  @include themify("background", "weather_box_color");
+
   height: 15rem;
   //   width: 60rem;
 

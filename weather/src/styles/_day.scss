@@ -2,7 +2,7 @@
 
 $day: (
   background_color: (
-    url(../assets/Clouds-200s.svg) repeat,
+    url(../assets/clouds_md.svg) repeat,
     linear-gradient(to bottom, $bg_light_blue, $bg_blue) fixed,
   ),
 
@@ -11,6 +11,8 @@ $day: (
     url(../assets/clouds_bg.svg) repeat,
     linear-gradient(to bottom, $yellow, $bg_blue) fixed,
   ),
-  header_color: $baby_blue,
-  tertiary: #cacaca,
+  searchbar_color: $baby_blue,
+  weather_box_color: $baby_blue,
+  text_color: $text_color,
+  title_color: $title_color,
 );
