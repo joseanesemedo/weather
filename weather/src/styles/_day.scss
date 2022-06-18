@@ -5,6 +5,15 @@ $day: (
     url(../assets/clouds_md.svg) repeat,
     linear-gradient(to bottom, $bg_light_blue, $bg_blue) fixed,
   ),
+//   background_color: (
+//     url(../assets/clouds_sunset.svg) repeat,
+//     linear-gradient(
+//       0deg,
+//       hsl(25deg 93% 42%) 0%,
+//       hsl(345deg 25% 56%) 26%,
+//       hsl(206deg 93% 48%) 100%
+// ) fixed,
+//   ),
 
   // TODO for wider screens
   background_color_wide: (

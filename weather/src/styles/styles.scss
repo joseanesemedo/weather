@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 // @media (max-width: 760px) {
 //   body {
 //     background: url(./assets/Clouds-200s.svg) repeat,

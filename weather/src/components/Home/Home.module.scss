@@ -11,10 +11,6 @@
   @include themify("background", "background_color");
   background-size: auto;
 
-  &::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-  }
-
   .container {
     max-width: 60rem;
     margin: 0 auto;

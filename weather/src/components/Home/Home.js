@@ -23,6 +23,7 @@ const Home = () => {
         <Header />
         <SearchBar onSearchData={addData} />
         {data ? <CurrentWeather data={data} error={error} /> : <></>}
+        {data ? <CurrentWeather data={data} error={error} /> : <></>}
       </div>
     </div>
   );
