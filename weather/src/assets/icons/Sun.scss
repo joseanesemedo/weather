@@ -62,3 +62,9 @@
 .icon__sun_light:nth-child(8) {
   transform: rotate(315deg);
 }
+
+@media (max-width: 60em) {
+  .icon__sun {
+    transform: scale(0.8);
+  }
+}

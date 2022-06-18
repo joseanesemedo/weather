@@ -18,14 +18,14 @@ const Home = () => {
   };
 
   return (
-    <div className={`${classes.home} ${classes[globalTheme]}`}>
+    <main className={`${classes.home} ${classes[globalTheme]}`}>
       <div className={classes.container}>
         <Header />
         <SearchBar onSearchData={addData} />
         <CurrentWeather data={data} error={error} />
         {/* {data ? <CurrentWeather data={data} error={error} /> : <></>} */}
       </div>
-    </div>
+    </main>
   );
 };
 

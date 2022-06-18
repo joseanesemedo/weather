@@ -12,49 +12,60 @@ const SearchBar = (props) => {
 
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
+  const [units, setUnits] = useState("metric");
   const [error, setError] = useState("");
+
+  const [loading, setLoading] = useState(false);
+
+  const uriEncodedCity = encodeURIComponent(location);
 
   // const key = process.env.API_KEY;
   // console.log(key);
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=1deddd564f26d5846aa8a73399dc28d1&lang=eng`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${uriEncodedCity}&units=${units}&appid=1deddd564f26d5846aa8a73399dc28d1&lang=eng`;
 
-  const searchLocation = (event) => {
+  const searchLocation = (e) => {
+    e.preventDefault();
+    setLoading(true);
     // if (event.key === "Enter") {
     axios
       .get(url)
       .then((response) => {
         setError("");
         setData(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         setError("Not found");
+        setLoading(false);
       });
     props.onSearchData(data, error);
     // }
   };
 
   return (
-    <div className={`${classes.search_bar} ${classes[globalTheme]}`}>
-      <button className={`${classes.icon_btn}`} onClick={searchLocation}>
+    <form
+      className={`${classes.search_bar} ${classes[globalTheme]}`}
+      onSubmit={searchLocation}
+    >
+      {loading ? <h2>"sdsd"</h2> : <></>}
+      <button className={`${classes.icon_btn}`} type="submit">
         <UilSearch className={`${classes.icon} ${classes[globalTheme]}`} />
       </button>
-
       <input
         className={`${classes.input} ${classes[globalTheme]}`}
         type="text"
         placeholder="Search for location..."
         value={location}
-        onChange={(event) => setLocation(event.target.value)}
+        onChange={(e) => setLocation(e.target.value)}
         // onKeyDown={searchLocation}
-      ></input>
-
+      />
       <button className={`${classes.icon_btn}`}>
         <UilLocationPoint
           className={`${classes.icon} ${classes[globalTheme]}`}
         />
       </button>
-    </div>
+    </form>
   );
 };
 
