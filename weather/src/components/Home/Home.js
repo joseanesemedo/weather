@@ -3,6 +3,8 @@ import classes from "./Home.module.scss";
 import SearchBar from "../SearchBar/SearchBar";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import Header from "../Header/Header";
+import TemperatureDetails from "../TemperatureDetails/TemperatureDetails";
+import Forecast from "../Forecast/Forecast";
 
 import { ThemeContext } from "../../ThemeContextParent";
 
@@ -22,7 +24,11 @@ const Home = () => {
       <div className={classes.container}>
         <Header />
         <SearchBar onSearchData={addData} />
+
         <CurrentWeather data={data} error={error} />
+        <TemperatureDetails />
+        <Forecast title={"Hourly Forecast"} />
+
         {/* {data ? <CurrentWeather data={data} error={error} /> : <></>} */}
       </div>
     </main>

@@ -11,6 +11,7 @@ const CurrentWeather = (props) => {
 
   const { data, error } = props;
   const [time, setTime] = useState("");
+
   // console.log(data.weather.icon);
 
   // const test = () => {
@@ -32,6 +33,8 @@ const CurrentWeather = (props) => {
   //   console.log(formattedTime);
   //   setTime(formattedTime);
   // };
+
+  // ! city name, date time and weather / temperature
 
   return (
     <div className={`${classes.weather_box} ${classes[globalTheme]}`}>

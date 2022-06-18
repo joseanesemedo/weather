@@ -58,28 +58,35 @@ const SearchBar = (props) => {
   };
 
   return (
-    <form
-      className={`${classes.search_bar} ${classes[globalTheme]}`}
-      onSubmit={searchLocation}
-    >
-      {loading ? <h2>"sdsd"</h2> : <></>}
-      <button className={`${classes.icon_btn}`} type="submit">
-        <UilSearch className={`${classes.icon} ${classes[globalTheme]}`} />
-      </button>
-      <input
-        className={`${classes.input} ${classes[globalTheme]}`}
-        type="text"
-        placeholder="Search for location..."
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-        // onKeyDown={searchLocation}
-      />
-      <button className={`${classes.icon_btn}`}>
-        <UilLocationPoint
-          className={`${classes.icon} ${classes[globalTheme]}`}
+    <div>
+      <form
+        className={`${classes.search_bar} ${classes[globalTheme]}`}
+        onSubmit={searchLocation}
+      >
+        {/* {loading ? <h2>"sdsd"</h2> : <></>} */}
+        <button className={`${classes.icon_btn}`} type="submit">
+          <UilSearch className={`${classes.icon} ${classes[globalTheme]}`} />
+        </button>
+        <input
+          className={`${classes.input} ${classes[globalTheme]}`}
+          type="text"
+          placeholder="search for city..."
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+          // onKeyDown={searchLocation}
         />
-      </button>
-    </form>
+        <button className={`${classes.icon_btn}`}>
+          <UilLocationPoint
+            className={`${classes.icon} ${classes[globalTheme]}`}
+          />
+        </button>
+      </form>
+
+      <div className={`${classes.units}`}>
+        <button name="metric">°C</button>
+        <button name="imperial">°F</button>
+      </div>
+    </div>
   );
 };
 
