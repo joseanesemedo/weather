@@ -22,8 +22,8 @@ const Home = () => {
       <div className={classes.container}>
         <Header />
         <SearchBar onSearchData={addData} />
-        {data ? <CurrentWeather data={data} error={error} /> : <></>}
-        {data ? <CurrentWeather data={data} error={error} /> : <></>}
+        <CurrentWeather data={data} error={error} />
+        {/* {data ? <CurrentWeather data={data} error={error} /> : <></>} */}
       </div>
     </div>
   );

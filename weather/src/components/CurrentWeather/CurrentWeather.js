@@ -35,21 +35,29 @@ const CurrentWeather = (props) => {
 
   return (
     <div className={`${classes.weather_box} ${classes[globalTheme]}`}>
-      <div className={classes.weather_info}>
-        <div className={classes.temperature}>
-          {data.main ? <h2>{data.main.temp.toFixed()}º</h2> : null}
-        </div>
-        <div className={classes.description_container}>
-          <div className={classes.weather_description}>
-            {data.weather ? <h2>{data.weather[0].description}</h2> : null}
+      {data ? (
+        <>
+          <div className={classes.weather_info}>
+            <div className={classes.temperature}>
+              {data.main ? <h2>{data.main.temp.toFixed()}º</h2> : null}
+            </div>
+            <div className={classes.description_container}>
+              <div className={classes.weather_description}>
+                {data.weather ? <h2>{data.weather[0].description}</h2> : null}
+              </div>
+              <h1 className={classes.city_name}>{data.name}</h1>
+            </div>
           </div>
-          <h1 className={classes.city_name}>{data.name}</h1>
-        </div>
-      </div>
 
-      <div className={classes.city_info}>
-        <div className={classes.icon_container}>{/* <PartlyCloudy /> */}</div>
-      </div>
+          <div className={classes.city_info}>
+            <div className={classes.icon_container}>
+              <PartlyCloudy />
+            </div>
+          </div>
+        </>
+      ) : (
+        <div>"dd"</div>
+      )}
     </div>
   );
 };
