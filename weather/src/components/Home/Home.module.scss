@@ -7,7 +7,7 @@
   scrollbar-width: none; /* Firefox */
   padding: 1.25rem 2.5rem;
 
-  //   width: 68.75rem;
+  //   width: 100%;
   //   margin: 0 auto;
   min-height: 100vh;
   @include themify("background", "background_color");
@@ -18,8 +18,14 @@
   }
 
   .container {
-    width: 69rem;
+    max-width: 60rem;
     margin: 0 auto;
-    width: 100%;
+    // width: 80%;
+
+    // padding: 0 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
 }
