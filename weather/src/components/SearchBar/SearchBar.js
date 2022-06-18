@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 
 import classes from "./SearchBar.module.scss";
 import { FaSearch, FaSearchLocation } from "react-icons/fa";
 
+import { ThemeContext } from "../../ThemeContextParent";
+
 const SearchBar = (props) => {
+  const { globalTheme } = useContext(ThemeContext);
+
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
   const [error, setError] = useState("");
@@ -30,7 +34,7 @@ const SearchBar = (props) => {
   };
 
   return (
-    <div className={classes.search_bar}>
+    <div className={`${classes.search_bar} ${classes[globalTheme]}`}>
       <FaSearch className={classes.icon} />
       <input
         type="text"

@@ -9,8 +9,8 @@ $day: (
   // TODO for wider screens
   background_color_wide: (
     url(../assets/clouds_bg.svg) repeat,
-    linear-gradient(to bottom, $bg_light_blue, $bg_blue) fixed,
+    linear-gradient(to bottom, $yellow, $bg_blue) fixed,
   ),
-  secondary: #eddc2a,
+  header_color: $baby_blue,
   tertiary: #cacaca,
 );

@@ -1,7 +1,9 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .search_bar {
-  background: $baby_blue;
+  // background: $baby_blue;
+  @include themify("background", "header_color");
   height: 3.5rem;
 
   border-radius: 50px;

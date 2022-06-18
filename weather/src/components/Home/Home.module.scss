@@ -7,8 +7,6 @@
   scrollbar-width: none; /* Firefox */
   padding: 1.25rem 2.5rem;
 
-  //   width: 100%;
-  //   margin: 0 auto;
   min-height: 100vh;
   @include themify("background", "background_color");
   background-size: auto;
@@ -20,12 +18,19 @@
   .container {
     max-width: 60rem;
     margin: 0 auto;
-    // width: 80%;
-
-    // padding: 0 2rem;
 
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 98em) {
+  .home {
+    @include themify("background", "background_color_wide");
+
+    .container {
+      max-width: 85rem;
+    }
   }
 }
