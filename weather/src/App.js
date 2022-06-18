@@ -6,9 +6,8 @@ import ThemeContextParent, {
 } from "./ThemeContextParent";
 
 import Home from "./components/Home/Home";
-import { useContext } from "react";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 
-// import { ThemeContext } from "./ThemeContextParent";
 function App() {
   // const { globalTheme, setGlobalTheme } = useContext(ThemeContext);
 
@@ -26,6 +25,8 @@ function App() {
 
   return (
     <ThemeContextParent>
+      <ThemeSwitcher changeTheme={DAY_THEME}>Day</ThemeSwitcher>
+      <ThemeSwitcher changeTheme={NIGHT_THEME}>Night</ThemeSwitcher>
       <Home></Home>
     </ThemeContextParent>
   );
