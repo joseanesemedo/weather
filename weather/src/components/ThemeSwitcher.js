@@ -1,15 +1,21 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../ThemeContextParent";
+import { DAY_THEME, NIGHT_THEME, ThemeContext } from "../ThemeContextParent";
 
-const ThemeSwitcher = (props) => {
-  const { globalTheme, setGlobalTheme } = useContext(ThemeContext);
-  const { children, changeTheme } = props;
+const ThemeSwitcher = () => {
+  const { setGlobalTheme } = useContext(ThemeContext);
 
-  const onClick = () => {
-    setGlobalTheme(changeTheme);
-  };
+  var t = new Date().getHours();
+  if (t < 10) {
+    setGlobalTheme(DAY_THEME);
+  } else if (t < 20) {
+    setGlobalTheme(DAY_THEME);
+  } else {
+    setGlobalTheme(NIGHT_THEME);
+  }
 
-  return <button onClick={onClick}>{children}</button>;
+  //   return <button onClick={onClick}>{children}</button>;
+
+  return <></>;
 };
 
 export default ThemeSwitcher;
