@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <div className={`${classes.home} ${classes[globalTheme]}`}>
-      <div>
+      <div className={classes.container}>
         <Header />
         <SearchBar onSearchData={addData} />
         {data ? <CurrentWeather data={data} error={error} /> : <></>}

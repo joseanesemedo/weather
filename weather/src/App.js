@@ -6,8 +6,14 @@ import ThemeContextParent, {
 } from "./ThemeContextParent";
 
 import Home from "./components/Home/Home";
+import { useContext } from "react";
 
+// import { ThemeContext } from "./ThemeContextParent";
 function App() {
+  // const { globalTheme, setGlobalTheme } = useContext(ThemeContext);
+
+  // setGlobalTheme("NIGHT_THEME");
+
   // let test;
   // var t = new Date().getHours();
   // if (t < 10) {
