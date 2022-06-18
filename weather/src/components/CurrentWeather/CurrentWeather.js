@@ -51,7 +51,7 @@ const CurrentWeather = (props) => {
 
           <div className={classes.city_info}>
             <div className={classes.icon_container}>
-              <PartlyCloudy />
+              {/* <PartlyCloudy /> */}
             </div>
           </div>
         </>

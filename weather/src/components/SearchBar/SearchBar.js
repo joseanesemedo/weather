@@ -10,7 +10,7 @@ import { ThemeContext } from "../../ThemeContextParent";
 const SearchBar = (props) => {
   const { globalTheme } = useContext(ThemeContext);
 
-  const [data, setData] = useState({});
+  const [data, setData] = useState([{}]);
   const [location, setLocation] = useState("");
   const [units, setUnits] = useState("metric");
   const [error, setError] = useState("");
@@ -28,17 +28,31 @@ const SearchBar = (props) => {
     e.preventDefault();
     setLoading(true);
     // if (event.key === "Enter") {
-    axios
-      .get(url)
+    // axios
+    //   .get(url)
+    //   .then((response) => {
+    //     setError("");
+    //     setData(response.data);
+    //     setLoading(false);
+    //   })
+    //   .catch((error) => {
+    //     setError("Not found");
+    //     setLoading(false);
+    //   });
+
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${uriEncodedCity}&units=${units}&appid=1deddd564f26d5846aa8a73399dc28d1&lang=eng`
+    )
+      .then((response) => response.json())
       .then((response) => {
-        setError("");
-        setData(response.data);
+        setData(response);
         setLoading(false);
       })
-      .catch((error) => {
-        setError("Not found");
+      .catch((err) => {
+        setError(true);
         setLoading(false);
       });
+
     props.onSearchData(data, error);
     // }
   };
