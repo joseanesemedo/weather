@@ -57,7 +57,7 @@ const formatForecastWeather = (data) => {
   // get just 5
   daily = daily.slice(1, 6).map((d) => {
     return {
-      time: formatToLocalTime(d.dt, timezone, "ccc"),
+      title: formatToLocalTime(d.dt, timezone, "ccc"),
       // add more later TODO 1:30
       temp: d.temp.day,
       icon: d.weather[0].icon,
@@ -66,8 +66,8 @@ const formatForecastWeather = (data) => {
 
   hourly = hourly.slice(1, 9).map((d) => {
     return {
-      time: formatToLocalTime(d.dt, timezone, "hh:mm a"),
-      temp: d.temp.day,
+      title: formatToLocalTime(d.dt, timezone, "hh:mm a"),
+      temp: d.temp,
       icon: d.weather[0].icon,
     };
   });

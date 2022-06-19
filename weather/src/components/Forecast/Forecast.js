@@ -1,6 +1,7 @@
 import React from "react";
+import { iconUrlFromCode } from "../../services/weatherService";
 
-function Forecast({ title }) {
+function Forecast({ title, items }) {
   return (
     <div>
       <div>
@@ -9,85 +10,20 @@ function Forecast({ title }) {
       <hr></hr>
 
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        {/* card */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            background: "#aea",
-          }}
-        >
-          <p>04:30pm</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            style={{ width: 50 }}
-          />
-          <p>22º</p>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            background: "#aea",
-          }}
-        >
-          <p>04:30pm</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            style={{ width: 50 }}
-          />
-          <p>22º</p>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            background: "#aea",
-          }}
-        >
-          <p>04:30pm</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            style={{ width: 50 }}
-          />
-          <p>22º</p>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            background: "#aea",
-          }}
-        >
-          <p>04:30pm</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            style={{ width: 50 }}
-          />
-          <p>22º</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            background: "#aea",
-          }}
-        >
-          <p>04:30pm</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            style={{ width: 50 }}
-          />
-          <p>22º</p>
-        </div>
+        {items.map((item) => (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              background: "#aea",
+            }}
+          >
+            <p>{`${item.title}`}</p>
+            <img src={iconUrlFromCode(item.icon)} style={{ width: 50 }} />
+            <p>{`${item.temp.toFixed()}°`}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
