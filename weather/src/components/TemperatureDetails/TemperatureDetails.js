@@ -21,7 +21,7 @@ const TemperatureDetails = ({
     sunrise,
     sunset,
     speed,
-    uvi,
+    current: { uvi },
     humidity,
     feels_like,
     timezone,
@@ -39,7 +39,7 @@ const TemperatureDetails = ({
         <div>
           <UilTemperature size={20} />
           Real Feel:
-          <span>{feels_like}</span>
+          <span>{`${feels_like.toFixed()}°`}</span>
           <img src={iconUrlFromCode(icon)} />
         </div>
 
@@ -47,6 +47,12 @@ const TemperatureDetails = ({
           <UilTear size={20} />
           Humidity:
           <span>{`${humidity}%`}</span>
+        </div>
+
+        <div>
+          <UilTear size={20} />
+          UVI:
+          <span>{`${uvi.toFixed()}`}</span>
         </div>
 
         <div>
@@ -74,14 +80,14 @@ const TemperatureDetails = ({
         <div>
           <UilArrowUp />
           <p>
-            High: <span>{temp_max}</span>
+            High: <span>{`${temp_max.toFixed()}°`}</span>
           </p>
         </div>
 
         <div>
           <UilArrowDown />
           <p>
-            Low: <span>19º</span>
+            Low: <span>{`${temp_min.toFixed()}°`}</span>
           </p>
         </div>
       </div>
