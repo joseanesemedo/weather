@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import classes from "./Home.module.scss";
 import SearchBar from "../SearchBar/SearchBar";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
@@ -10,15 +10,24 @@ import { ThemeContext } from "../../ThemeContextParent";
 import getFormattedWeatherData from "../../assets/weatherService";
 
 const Home = () => {
-  const fetchWeather = async () => {
-    const data = await getFormattedWeatherData({ q: "praia" });
-    console.log(data);
-  };
-
-  fetchWeather();
-
   const { globalTheme } = useContext(ThemeContext);
 
+  const [query, setQuery] = useState({ q: "sao paulo" });
+  const [units, setUnits] = useState("metric");
+  const [weather, setWeather] = useState(null);
+
+  // fetch data and reload every time query or unit changes
+  useEffect(() => {
+    const fetchWeather = async () => {
+      await getFormattedWeatherData({ ...query, units }).then((data) => {
+        setWeather(data);
+      });
+    };
+
+    fetchWeather();
+  }, [query, units]);
+
+  console.log(weather);
   const [data, setData] = useState();
   const [error, setError] = useState("");
 
@@ -34,9 +43,14 @@ const Home = () => {
         <SearchBar onSearchData={addData} />
 
         <CurrentWeather data={data} error={error} />
-        <TemperatureDetails />
-        <Forecast title={"Hourly Forecast"} />
-        <Forecast title={"Daily Forecast"} />
+
+        {weather && (
+          <div>
+            <TemperatureDetails />
+            <Forecast title={"Hourly Forecast"} />
+            <Forecast title={"Daily Forecast"} />
+          </div>
+        )}
 
         {/* {data ? <CurrentWeather data={data} error={error} /> : <></>} */}
       </div>
