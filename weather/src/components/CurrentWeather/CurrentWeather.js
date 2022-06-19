@@ -5,11 +5,13 @@ import Cloudy from "../../assets/icons/Cloudy";
 import Sun from "../../assets/icons/Sun";
 import Cloud from "../../assets/icons/Cloud";
 import { ThemeContext } from "../../ThemeContextParent";
+import { formatToLocalTime } from "../../assets/weatherService";
 
-const CurrentWeather = (props) => {
+function CurrentWeather({
+  weather: { temp, details, dt, timezone, name, country },
+}) {
   const { globalTheme } = useContext(ThemeContext);
 
-  const { data, error } = props;
   const [time, setTime] = useState("");
 
   // console.log(data.weather.icon);
@@ -38,31 +40,24 @@ const CurrentWeather = (props) => {
 
   return (
     <div className={`${classes.weather_box} ${classes[globalTheme]}`}>
-      {data ? (
-        <>
-          <div className={classes.weather_info}>
-            <div className={classes.temperature}>
-              {data.main ? <h2>{data.main.temp.toFixed()}º</h2> : null}
-            </div>
-            <div className={classes.description_container}>
-              <div className={classes.weather_description}>
-                {data.weather ? <h2>{data.weather[0].description}</h2> : null}
-              </div>
-              <h1 className={classes.city_name}>{data.name}</h1>
-            </div>
-          </div>
+      <div className={classes.weather_info}>
+        <div className={classes.temperature}>{temp}</div>
+        <div className={classes.description_container}>
+          <div className={classes.weather_description}>{details}</div>
+          <h1 className={classes.city_name}>{name}</h1>
+        </div>
+      </div>
 
-          <div className={classes.city_info}>
-            <div className={classes.icon_container}>
-              {/* <PartlyCloudy /> */}
-            </div>
-          </div>
-        </>
-      ) : (
-        <div></div>
-      )}
+      <div className={classes.city_info}>
+        <div className={classes.icon_container}>
+          {" "}
+          <PartlyCloudy />{" "}
+        </div>
+
+        {formatToLocalTime(dt, timezone)}
+      </div>
     </div>
   );
-};
+}
 
 export default CurrentWeather;

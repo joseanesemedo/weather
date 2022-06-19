@@ -9,7 +9,19 @@ import {
   UilSunset,
 } from "@iconscout/react-unicons";
 
-const TemperatureDetails = () => {
+const TemperatureDetails = ({
+  weather: {
+    icon,
+    temp_min,
+    temp_max,
+    sunrise,
+    sunset,
+    speed,
+    humidity,
+    feels_like,
+    timezone,
+  },
+}) => {
   return (
     <div
       style={{

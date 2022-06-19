@@ -12,7 +12,7 @@ import getFormattedWeatherData from "../../assets/weatherService";
 const Home = () => {
   const { globalTheme } = useContext(ThemeContext);
 
-  const [query, setQuery] = useState({ q: "sao paulo" });
+  const [query, setQuery] = useState({ q: "praia" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
@@ -41,12 +41,10 @@ const Home = () => {
       <div className={classes.container}>
         <Header />
         <SearchBar onSearchData={addData} />
-
-        <CurrentWeather data={data} error={error} />
-
         {weather && (
           <div>
-            <TemperatureDetails />
+            <CurrentWeather weather={weather} />
+            <TemperatureDetails weather={weather} />
             <Forecast title={"Hourly Forecast"} />
             <Forecast title={"Daily Forecast"} />
           </div>
