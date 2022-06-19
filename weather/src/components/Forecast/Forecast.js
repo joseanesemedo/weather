@@ -10,8 +10,9 @@ function Forecast({ title, items }) {
       <hr></hr>
 
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        {items.map((item) => (
+        {items.map((item, i) => (
           <div
+            key={i}
             style={{
               display: "flex",
               flexDirection: "column",

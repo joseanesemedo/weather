@@ -55,7 +55,7 @@ const formatForecastWeather = (data) => {
   } = data;
 
   // get just 5
-  daily = daily.slice(1, 6).map((d) => {
+  daily = daily.slice(1, 8).map((d) => {
     return {
       title: formatToLocalTime(d.dt, timezone, "ccc"),
       // add more later TODO 1:30

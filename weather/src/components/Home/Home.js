@@ -28,19 +28,20 @@ const Home = () => {
   }, [query, units]);
 
   console.log(weather);
-  const [data, setData] = useState();
-  const [error, setError] = useState("");
+  // const [data, setData] = useState();
+  // const [error, setError] = useState("");
 
-  const addData = (data) => {
-    setData(data);
-    setError(error);
-  };
+  // const addData = (data) => {
+  //   setData(data);
+  //   setError(error);
+  // };
 
   return (
     <main className={`${classes.home} ${classes[globalTheme]}`}>
       <div className={classes.container}>
         <Header />
-        <SearchBar onSearchData={addData} />
+        {/* <SearchBar onSearchData={addData} /> */}
+        <SearchBar />
         {weather && (
           <div>
             <CurrentWeather weather={weather} />
