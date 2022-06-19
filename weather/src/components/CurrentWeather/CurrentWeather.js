@@ -5,7 +5,7 @@ import Cloudy from "../../assets/icons/Cloudy";
 import Sun from "../../assets/icons/Sun";
 import Cloud from "../../assets/icons/Cloud";
 import { ThemeContext } from "../../ThemeContextParent";
-import { formatToLocalTime } from "../../assets/weatherService";
+import { formatToLocalTime } from "../../services/weatherService";
 
 function CurrentWeather({
   weather: { temp, details, dt, timezone, name, country },
@@ -41,11 +41,12 @@ function CurrentWeather({
   return (
     <div className={`${classes.weather_box} ${classes[globalTheme]}`}>
       <div className={classes.weather_info}>
-        <div className={classes.temperature}>{temp}</div>
+        <div className={classes.temperature}>{`${temp.toFixed()}°`}</div>
         <div className={classes.description_container}>
-          <div className={classes.weather_description}>{details}</div>
+          <div className={classes.weather_description}>{`${details}`}</div>
           <h1 className={classes.city_name}>{name}</h1>
         </div>
+        {formatToLocalTime(dt, timezone, "HH:mm a")}
       </div>
 
       <div className={classes.city_info}>
@@ -53,8 +54,6 @@ function CurrentWeather({
           {" "}
           <PartlyCloudy />{" "}
         </div>
-
-        {formatToLocalTime(dt, timezone)}
       </div>
     </div>
   );
