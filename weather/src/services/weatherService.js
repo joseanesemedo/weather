@@ -25,7 +25,7 @@ const formatCurrentWeather = (data) => {
     wind: { speed },
   } = data;
 
-  const { main: details, icon } = weather[0];
+  const { main, description, icon } = weather[0];
 
   return {
     lat,
@@ -40,7 +40,8 @@ const formatCurrentWeather = (data) => {
     country,
     sunrise,
     sunset,
-    details,
+    main,
+    description,
     icon,
     speed,
   };
@@ -54,17 +55,16 @@ const formatForecastWeather = (data) => {
     hourly,
   } = data;
 
-  // get just 5
   daily = daily.slice(1, 8).map((d) => {
     return {
       title: formatToLocalTime(d.dt, timezone, "ccc"),
-      // add more later TODO 1:30
       temp: d.temp.day,
       icon: d.weather[0].icon,
+      detail: d.weather[0].main,
     };
   });
 
-  hourly = hourly.slice(1, 12).map((d) => {
+  hourly = hourly.slice(1, 9).map((d) => {
     return {
       // hh:mm a
       title: formatToLocalTime(d.dt, timezone, "HH:mm"),

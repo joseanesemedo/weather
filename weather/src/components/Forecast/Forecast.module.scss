@@ -1,6 +1,22 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 
+::-webkit-scrollbar {
+  height: 0.4rem;
+  border-radius: 1.5rem;
+  background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 1.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
 .forecast_container {
   border-radius: 25px;
   padding: 10px 25px;
@@ -17,7 +33,7 @@
 
   .forecast_box {
     display: flex;
-    justify-content: space-around;
+    // justify-content: space-around;
 
     overflow-x: auto;
     overflow-y: hidden;
@@ -32,6 +48,11 @@
 
       .forecast_title {
         font-size: 1.2rem;
+      }
+
+      .forecast_detail {
+        font-size: 1.2rem;
+        font-weight: 600;
       }
 
       .forecast_temp {

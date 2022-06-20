@@ -24,6 +24,15 @@ function Forecast({ title, items }) {
               className={`${classes.forecast_title} ${classes[globalTheme]}`}
             >{`${item.title}`}</p>
             <img src={iconUrlFromCode(item.icon)} style={{ width: 50 }} />
+
+            {item.detail ? (
+              <p
+                className={`${classes.forecast_detail} ${classes[globalTheme]}`}
+              >{`${item.detail}`}</p>
+            ) : (
+              <></>
+            )}
+
             <p
               className={`${classes.forecast_temp} ${classes[globalTheme]}`}
             >{`${item.temp.toFixed()}°`}</p>
