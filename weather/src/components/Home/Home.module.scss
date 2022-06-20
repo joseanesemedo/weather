@@ -35,8 +35,8 @@
   .home {
     @include themify("background", "background_color_wide");
 
-    .container {
-      max-width: 70rem;
-    }
+    // .container {
+    //   max-width: 60rem;
+    // }
   }
 }

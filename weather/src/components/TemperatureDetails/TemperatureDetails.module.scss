@@ -2,8 +2,8 @@
 @use "../../styles/mixins" as *;
 
 .details_container {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 
   .weather_details {
     padding: 10px;
@@ -12,6 +12,7 @@
       display: flex;
       align-items: center;
       gap: 5px;
+      margin: 10px 0;
 
       .weather_details_icon {
         @include themify("color", "text_color");
