@@ -5,6 +5,7 @@ import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import Header from "../Header/Header";
 import TemperatureDetails from "../TemperatureDetails/TemperatureDetails";
 import Forecast from "../Forecast/Forecast";
+import ThemeSwitcher from "../ThemeSwitcher";
 
 import { ThemeContext } from "../../ThemeContextParent";
 import getFormattedWeatherData from "../../services/weatherService";
@@ -41,6 +42,8 @@ const Home = () => {
         <SearchBar setQuery={setQuery} units={units} setUnits={setUnits} />
         {weather && (
           <div className={classes.forecast_container}>
+            <ThemeSwitcher weather={weather} />
+
             <CurrentWeather weather={weather} />
             {/* <TemperatureDetails weather={weather} units={units} /> */}
             <Forecast title={"Hourly Forecast"} items={weather.hourly} />

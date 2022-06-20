@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
+import { formatToLocalTime } from "../services/weatherService";
 import {
   DAY_THEME,
   AFTERNOON_THEME,
@@ -6,19 +7,20 @@ import {
   ThemeContext,
 } from "../ThemeContextParent";
 
-const ThemeSwitcher = () => {
+const ThemeSwitcher = ({ weather: { dt, timezone } }) => {
   const { setGlobalTheme } = useContext(ThemeContext);
 
-  //   var time = new Date().getHours();
-  //   if (time < 15) {
-  //     setGlobalTheme(DAY_THEME);
-  //   } else if (time < 19) {
-  //     setGlobalTheme(AFTERNOON_THEME);
-  //   } else {
-  //     setGlobalTheme(NIGHT_THEME);
-  //   }
+  let time = formatToLocalTime(dt, timezone, "HH");
 
-  //   return <button onClick={onClick}>{children}</button>;
+  useEffect(() => {
+    if (Number(time) > 6 && Number(time) <= 15) {
+      setGlobalTheme(DAY_THEME);
+    } else if (Number(time) > 15 && Number(time) < 19) {
+      setGlobalTheme(AFTERNOON_THEME);
+    } else {
+      setGlobalTheme(NIGHT_THEME);
+    }
+  }, [setGlobalTheme, time]);
 
   return <></>;
 };

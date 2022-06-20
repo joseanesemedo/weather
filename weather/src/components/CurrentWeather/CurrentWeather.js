@@ -49,6 +49,7 @@ function CurrentWeather({
             </h1>
             <h1 className={`${classes.city_name} ${classes[globalTheme]}`}>
               {formatToLocalTime(dt, timezone, "cccc, dd LLLL")}
+              {formatToLocalTime(dt, timezone, "HH")}
             </h1>
           </div>
         </div>
