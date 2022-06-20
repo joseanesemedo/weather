@@ -7,10 +7,11 @@ $day: (
   ),
   background_color_wide: (
     url(../assets/clouds_bg.svg) repeat,
-    linear-gradient(to bottom, $yellow, $bg_blue) fixed,
+    linear-gradient(to bottom, $bg_light_blue, $bg_blue) fixed,
   ),
   searchbar_color: $baby_blue,
   weather_box_color: $baby_blue,
+  forecast_box_color: rgba($baby_blue, 0.7),
   text_color: $text_color,
   placeholder_text_color: red,
   title_color: $title_color,

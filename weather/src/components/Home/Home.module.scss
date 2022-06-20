@@ -22,6 +22,12 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    .forecast_container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 }
 
@@ -30,7 +36,7 @@
     @include themify("background", "background_color_wide");
 
     .container {
-      max-width: 90rem;
+      max-width: 70rem;
     }
   }
 }
