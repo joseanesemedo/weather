@@ -1,9 +1,6 @@
 import React, { useContext, useState } from "react";
 import classes from "./CurrentWeather.module.scss";
-import PartlyCloudy from "../../assets/icons/PartlyCloudy";
-import Cloudy from "../../assets/icons/Cloudy";
-import Sun from "../../assets/icons/Sun";
-import Cloud from "../../assets/icons/Cloud";
+import WeatherIcon from "../WeatherIcon";
 import { ThemeContext } from "../../ThemeContextParent";
 import { formatToLocalTime } from "../../services/weatherService";
 
@@ -53,8 +50,8 @@ function CurrentWeather({
 
       <div className={classes.city_info}>
         <div className={classes.icon_container}>
-          {" "}
-          <PartlyCloudy />{" "}
+          <WeatherIcon code={icon} />
+          {/* <PartlyCloudy />{" "} */}
         </div>
       </div>
     </div>
