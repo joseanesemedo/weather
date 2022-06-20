@@ -58,10 +58,18 @@ const SearchBar = ({ setQuery, units, setUnits }) => {
       </form>
 
       <div className={`${classes.units}`}>
-        <button name="metric" onClick={handleUnitsChange}>
+        <button
+          className={`${classes.unit_btn} ${classes[globalTheme]}`}
+          name="metric"
+          onClick={handleUnitsChange}
+        >
           °C
         </button>
-        <button name="imperial" onClick={handleUnitsChange}>
+        <button
+          className={`${classes.unit_btn} ${classes[globalTheme]}`}
+          name="imperial"
+          onClick={handleUnitsChange}
+        >
           °F
         </button>
       </div>

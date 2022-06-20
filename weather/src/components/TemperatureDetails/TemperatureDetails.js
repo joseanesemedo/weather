@@ -26,6 +26,7 @@ const TemperatureDetails = ({
     feels_like,
     timezone,
   },
+  units,
 }) => {
   return (
     <div
@@ -58,7 +59,10 @@ const TemperatureDetails = ({
         <div>
           <UilWind size={20} />
           Wind:
-          <span>{`${speed.toFixed()}km/h`}</span>
+          <span>
+            {`${speed.toFixed()}`}
+            {/* {units === "metric" ? "km/h" : "mph"} */}
+          </span>
         </div>
       </div>
 

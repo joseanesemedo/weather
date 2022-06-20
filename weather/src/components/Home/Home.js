@@ -19,8 +19,11 @@ const Home = () => {
 
   // fetch data and reload every time query or unit changes
   useEffect(() => {
+    setLoading(true);
+
     const fetchWeather = async () => {
       await getFormattedWeatherData({ ...query, units }).then((data) => {
+        setLoading(false);
         setWeather(data);
       });
     };
@@ -29,24 +32,17 @@ const Home = () => {
   }, [query, units]);
 
   console.log(weather);
-  // const [data, setData] = useState();
-  // const [error, setError] = useState("");
-
-  // const addData = (data) => {
-  //   setData(data);
-  //   setError(error);
-  // };
 
   return (
     <main className={`${classes.home} ${classes[globalTheme]}`}>
       <div className={classes.container}>
         <Header />
-        {/* <SearchBar onSearchData={addData} /> */}
+        {loading ? <div>loading</div> : <></>}
         <SearchBar setQuery={setQuery} units={units} setUnits={setUnits} />
         {weather && (
           <div className={classes.forecast_container}>
             <CurrentWeather weather={weather} />
-            <TemperatureDetails weather={weather} />
+            <TemperatureDetails weather={weather} units={units} />
             <Forecast title={"Hourly Forecast"} items={weather.hourly} />
             <Forecast title={"Daily Forecast"} items={weather.daily} />
           </div>
