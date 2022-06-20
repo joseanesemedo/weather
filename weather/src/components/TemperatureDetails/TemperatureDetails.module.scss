@@ -1,0 +1,31 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.details_container {
+  background: pink;
+  display: flex;
+  gap: 20px;
+
+  .weather_details {
+    padding: 10px;
+
+    .weather_detail {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .weather_details_icon {
+        @include themify("color", "title_color");
+      }
+
+      p {
+        @include themify("color", "title_color");
+      }
+
+      span {
+        @include themify("color", "title_color");
+        font-weight: 500;
+      }
+    }
+  }
+}

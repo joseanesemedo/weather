@@ -3,7 +3,7 @@
 
 .weather_box {
   @include themify("background", "weather_box_color");
-  height: 15rem;
+  // height: 15rem;
 
   border-radius: 25px;
   padding: 0.625rem;
@@ -38,7 +38,7 @@
     background: pink;
 
     .temperature {
-      color: $title_color;
+      @include themify("color", "title_color");
       font-size: 5rem;
       font-weight: 500;
     }
@@ -48,7 +48,7 @@
       flex-direction: column;
 
       .city_name {
-        color: $title_color;
+        @include themify("color", "title_color");
         font-size: 2.5rem;
         font-weight: 600;
       }
@@ -61,8 +61,32 @@
     }
   }
 
-  .weather_details {
+  .details_container {
     background: pink;
+    display: flex;
+
+    .weather_details {
+      padding: 10px;
+
+      .weather_detail {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .weather_details_icon {
+          @include themify("color", "title_color");
+        }
+
+        p {
+          @include themify("color", "title_color");
+        }
+
+        span {
+          @include themify("color", "title_color");
+          font-weight: 500;
+        }
+      }
+    }
   }
 }
 

@@ -1,17 +1,10 @@
 import React, { useContext } from "react";
-import {
-  UilArrowUp,
-  UilArrowDown,
-  UilTemperature,
-  UilTear,
-  UilWind,
-  UilSun,
-  UilSunset,
-} from "@iconscout/react-unicons";
+
 import classes from "./CurrentWeather.module.scss";
 import WeatherIcon from "../WeatherIcon";
 import { ThemeContext } from "../../ThemeContextParent";
 import { formatToLocalTime } from "../../services/weatherService";
+import TemperatureDetails from "../TemperatureDetails/TemperatureDetails";
 
 function CurrentWeather({
   weather: {
@@ -65,9 +58,20 @@ function CurrentWeather({
         </div>
       </div>
 
-      <div className={`${classes.weather_details} ${classes[globalTheme]}`}>
-        ss
-      </div>
+      <TemperatureDetails
+        weather={{
+          icon,
+          temp_min,
+          temp_max,
+          sunrise,
+          sunset,
+          speed,
+          current: { uvi },
+          humidity,
+          feels_like,
+          timezone,
+        }}
+      />
     </div>
   );
 }

@@ -42,7 +42,7 @@ const Home = () => {
         {weather && (
           <div className={classes.forecast_container}>
             <CurrentWeather weather={weather} />
-            <TemperatureDetails weather={weather} units={units} />
+            {/* <TemperatureDetails weather={weather} units={units} /> */}
             <Forecast title={"Hourly Forecast"} items={weather.hourly} />
             <Forecast title={"Daily Forecast"} items={weather.daily} />
           </div>
