@@ -8,13 +8,11 @@ function Forecast({ title, items }) {
 
   return (
     <div className={`${classes.forecast_container} ${classes[globalTheme]}`}>
-      <div>
-        <p
-          className={`${classes.forecast_container_title} ${classes[globalTheme]}`}
-        >
-          {title}
-        </p>
-      </div>
+      <p
+        className={`${classes.forecast_container_title} ${classes[globalTheme]}`}
+      >
+        {title}
+      </p>
 
       <div className={`${classes.forecast_box} ${classes[globalTheme]}`}>
         {items.map((item, i) => (
