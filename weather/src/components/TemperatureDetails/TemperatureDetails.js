@@ -120,6 +120,7 @@ const TemperatureDetails = ({
           <p className={`${classes[globalTheme]}`}>Wind speed</p>
           <span className={`${classes[globalTheme]}`}>
             {`${speed.toFixed()}`}
+            {units === "metric" ? "km/h " : "mph"}
           </span>
         </div>
       </div>

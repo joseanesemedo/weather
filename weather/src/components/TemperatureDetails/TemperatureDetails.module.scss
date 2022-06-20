@@ -2,7 +2,6 @@
 @use "../../styles/mixins" as *;
 
 .details_container {
-  background: pink;
   display: flex;
   gap: 20px;
 
@@ -15,15 +14,16 @@
       gap: 5px;
 
       .weather_details_icon {
-        @include themify("color", "title_color");
+        @include themify("color", "text_color");
       }
 
       p {
-        @include themify("color", "title_color");
+        @include themify("color", "text_color");
+        font-weight: 500;
       }
 
       span {
-        @include themify("color", "title_color");
+        @include themify("color", "text_color");
         font-weight: 500;
       }
     }

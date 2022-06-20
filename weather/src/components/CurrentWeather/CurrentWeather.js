@@ -43,13 +43,15 @@ function CurrentWeather({
           >
             {`${description}`}
           </div>
-          <h1 className={`${classes.city_name} ${classes[globalTheme]}`}>
-            {`${name}-${country}`}
-          </h1>
+          <div className={`${classes.date} ${classes[globalTheme]}`}>
+            <h1 className={`${classes.city_name} ${classes[globalTheme]}`}>
+              {`${name}-${country}`}
+            </h1>
+            <h1 className={`${classes.city_name} ${classes[globalTheme]}`}>
+              {formatToLocalTime(dt, timezone, "cccc, dd LLLL")}
+            </h1>
+          </div>
         </div>
-        {formatToLocalTime(dt, timezone, "HH:mm")}
-        <br />
-        {formatToLocalTime(dt, timezone, "cccc, dd")}
       </div>
 
       <div className={classes.city_info}>
@@ -71,6 +73,7 @@ function CurrentWeather({
           feels_like,
           timezone,
         }}
+        units={units}
       />
     </div>
   );
