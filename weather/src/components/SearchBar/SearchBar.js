@@ -12,36 +12,28 @@ const SearchBar = ({ setQuery, units, setUnits }) => {
 
   const [city, setCity] = useState("");
 
-  // const [data, setData] = useState([{}]);
-  // const [location, setLocation] = useState("");
-  // const [units, setUnits] = useState("metric");
-  // const [error, setError] = useState("");
-
-  // const [loading, setLoading] = useState(false);
-
-  // const uriEncodedCity = encodeURIComponent(location);
-  // const url = `https://api.openweathermap.org/data/2.5/weather?q=${uriEncodedCity}&units=${units}&appid=1deddd564f26d5846aa8a73399dc28d1&lang=eng`;
-
-  // const searchLocation = (e) => {
-  //   e.preventDefault();
-  //   fetch(
-  //     `https://api.openweathermap.org/data/2.5/weather?q=${uriEncodedCity}&units=${units}&appid=1deddd564f26d5846aa8a73399dc28d1&lang=eng`
-  //   )
-  //     .then((response) => response.json())
-  //     .then((response) => {
-  //       setData(response);
-  //       setLoading(false);
-  //     })
-  //     .catch((err) => {
-  //       setError(true);
-  //       setLoading(false);
-  //     });
-  //   props.onSearchData(data, error);
-  // };
-
   const handleSearchClick = () => {
     if (city !== "") {
       setQuery({ q: city });
+    }
+  };
+
+  const handleUnitsChange = (e) => {
+    const selectedUnit = e.currentTarget.name;
+
+    if (units !== selectedUnit) {
+      setUnits(selectedUnit);
+    }
+  };
+
+  const handleLocationClick = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        let lat = position.coords.latitude;
+        let lon = position.coords.longitude;
+
+        setQuery({ lat, lon });
+      });
     }
   };
 
@@ -61,12 +53,17 @@ const SearchBar = ({ setQuery, units, setUnits }) => {
         />
         <UilLocationPoint
           className={`${classes.icon} ${classes[globalTheme]}`}
+          onClick={handleLocationClick}
         />
       </form>
 
       <div className={`${classes.units}`}>
-        <button name="metric">°C</button>
-        <button name="imperial">°F</button>
+        <button name="metric" onClick={handleUnitsChange}>
+          °C
+        </button>
+        <button name="imperial" onClick={handleUnitsChange}>
+          °F
+        </button>
       </div>
     </div>
   );
