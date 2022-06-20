@@ -3,9 +3,9 @@ import classes from "./Home.module.scss";
 import SearchBar from "../SearchBar/SearchBar";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import Header from "../Header/Header";
-import TemperatureDetails from "../TemperatureDetails/TemperatureDetails";
 import Forecast from "../Forecast/Forecast";
 import ThemeSwitcher from "../ThemeSwitcher";
+import Loading from "../UI/Loading";
 
 import { ThemeContext } from "../../ThemeContextParent";
 import getFormattedWeatherData from "../../services/weatherService";
@@ -38,7 +38,7 @@ const Home = () => {
     <main className={`${classes.home} ${classes[globalTheme]}`}>
       <div className={classes.container}>
         <Header />
-        {loading ? <div>loading</div> : <></>}
+        {loading ? <Loading /> : <></>}
         <SearchBar setQuery={setQuery} units={units} setUnits={setUnits} />
         {weather && (
           <div className={classes.forecast_container}>
