@@ -12,7 +12,7 @@ import getFormattedWeatherData from "../../services/weatherService";
 const Home = () => {
   const { globalTheme } = useContext(ThemeContext);
 
-  const [query, setQuery] = useState({ q: "praia" });
+  const [query, setQuery] = useState({ q: "porto" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
