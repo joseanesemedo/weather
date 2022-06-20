@@ -10,6 +10,7 @@
   min-height: 100vh;
   @include themify("background", "background_color");
   background-size: auto;
+  transition: all 0.2s;
 
   &::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
