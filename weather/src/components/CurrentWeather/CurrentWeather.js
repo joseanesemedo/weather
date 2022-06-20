@@ -9,32 +9,6 @@ function CurrentWeather({
 }) {
   const { globalTheme } = useContext(ThemeContext);
 
-  const [time, setTime] = useState("");
-
-  // console.log(data.weather.icon);
-
-  // const test = () => {
-  //   return (
-  //     <div>{data.weather.icon === "02d" ? <PartlyCloudy /> : <Sun />}</div>
-  //   );
-  // };
-
-  // const convertTime = (unix) => {
-  //   let unix_timestamp = 1655481303;
-  //   var date = new Date(unix_timestamp * 1000);
-  //   var hours = date.getHours();
-  //   var minutes = "0" + date.getMinutes();
-  //   var seconds = "0" + date.getSeconds();
-
-  //   var formattedTime =
-  //     hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
-
-  //   console.log(formattedTime);
-  //   setTime(formattedTime);
-  // };
-
-  // ! city name, date time and weather / temperature
-
   return (
     <div className={`${classes.weather_box} ${classes[globalTheme]}`}>
       <div className={classes.weather_info}>

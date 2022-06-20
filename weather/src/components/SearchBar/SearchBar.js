@@ -7,79 +7,61 @@ import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 
 import { ThemeContext } from "../../ThemeContextParent";
 
-const SearchBar = (props) => {
+const SearchBar = ({ setQuery, units, setUnits }) => {
   const { globalTheme } = useContext(ThemeContext);
 
-  const [data, setData] = useState([{}]);
-  const [location, setLocation] = useState("");
-  const [units, setUnits] = useState("metric");
-  const [error, setError] = useState("");
+  const [city, setCity] = useState("");
 
-  const [loading, setLoading] = useState(false);
+  // const [data, setData] = useState([{}]);
+  // const [location, setLocation] = useState("");
+  // const [units, setUnits] = useState("metric");
+  // const [error, setError] = useState("");
 
-  const uriEncodedCity = encodeURIComponent(location);
+  // const [loading, setLoading] = useState(false);
 
-  // const key = process.env.API_KEY;
-  // console.log(key);
+  // const uriEncodedCity = encodeURIComponent(location);
+  // const url = `https://api.openweathermap.org/data/2.5/weather?q=${uriEncodedCity}&units=${units}&appid=1deddd564f26d5846aa8a73399dc28d1&lang=eng`;
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${uriEncodedCity}&units=${units}&appid=1deddd564f26d5846aa8a73399dc28d1&lang=eng`;
+  // const searchLocation = (e) => {
+  //   e.preventDefault();
+  //   fetch(
+  //     `https://api.openweathermap.org/data/2.5/weather?q=${uriEncodedCity}&units=${units}&appid=1deddd564f26d5846aa8a73399dc28d1&lang=eng`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((response) => {
+  //       setData(response);
+  //       setLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       setError(true);
+  //       setLoading(false);
+  //     });
+  //   props.onSearchData(data, error);
+  // };
 
-  const searchLocation = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    // if (event.key === "Enter") {
-    // axios
-    //   .get(url)
-    //   .then((response) => {
-    //     setError("");
-    //     setData(response.data);
-    //     setLoading(false);
-    //   })
-    //   .catch((error) => {
-    //     setError("Not found");
-    //     setLoading(false);
-    //   });
-
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${uriEncodedCity}&units=${units}&appid=1deddd564f26d5846aa8a73399dc28d1&lang=eng`
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        setData(response);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(true);
-        setLoading(false);
-      });
-
-    props.onSearchData(data, error);
-    // }
+  const handleSearchClick = () => {
+    if (city !== "") {
+      setQuery({ q: city });
+    }
   };
 
   return (
     <div>
-      <form
-        className={`${classes.search_bar} ${classes[globalTheme]}`}
-        onSubmit={searchLocation}
-      >
-        {/* {loading ? <h2>"sdsd"</h2> : <></>} */}
-        <button className={`${classes.icon_btn}`} type="submit">
-          <UilSearch className={`${classes.icon} ${classes[globalTheme]}`} />
-        </button>
+      <form className={`${classes.search_bar} ${classes[globalTheme]}`}>
+        <UilSearch
+          className={`${classes.icon} ${classes[globalTheme]}`}
+          onClick={handleSearchClick}
+        />
         <input
           className={`${classes.input} ${classes[globalTheme]}`}
           type="text"
           placeholder="search for city..."
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-          // onKeyDown={searchLocation}
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
         />
-        <button className={`${classes.icon_btn}`}>
-          <UilLocationPoint
-            className={`${classes.icon} ${classes[globalTheme]}`}
-          />
-        </button>
+        <UilLocationPoint
+          className={`${classes.icon} ${classes[globalTheme]}`}
+        />
       </form>
 
       <div className={`${classes.units}`}>

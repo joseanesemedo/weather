@@ -60,6 +60,7 @@ const formatForecastWeather = (data) => {
       title: formatToLocalTime(d.dt, timezone, "ccc"),
       temp: d.temp.day,
       icon: d.weather[0].icon,
+      id: d.weather[0].id,
       detail: d.weather[0].main,
     };
   });
@@ -69,6 +70,7 @@ const formatForecastWeather = (data) => {
       // hh:mm a
       title: formatToLocalTime(d.dt, timezone, "HH:mm"),
       temp: d.temp,
+      id: d.weather[0].id,
       icon: d.weather[0].icon,
     };
   });

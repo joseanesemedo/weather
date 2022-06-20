@@ -42,7 +42,7 @@ const Home = () => {
       <div className={classes.container}>
         <Header />
         {/* <SearchBar onSearchData={addData} /> */}
-        <SearchBar />
+        <SearchBar setQuery={setQuery} units={units} setUnits={setUnits} />
         {weather && (
           <div className={classes.forecast_container}>
             <CurrentWeather weather={weather} />

@@ -22,7 +22,6 @@
   padding: 10px 25px;
 
   @include themify("background", "forecast_box_color");
-  //   background: rgba($color: #fff, $alpha: 0.6);
   background-size: auto;
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
 
