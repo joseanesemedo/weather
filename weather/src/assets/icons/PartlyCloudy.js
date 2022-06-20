@@ -7,7 +7,7 @@ const PartlyCloudy = (props) => {
   return (
     <div className={`container  ${props.className}`}>
       <Sun />
-      <Cloud className="cloud" />
+      <Cloud className="cloud float" />
       <div className="icon__shadow"></div>
     </div>
   );

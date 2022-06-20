@@ -11,12 +11,14 @@ $day: (
   ),
   searchbar_color: $baby_blue,
 
-  weather_box_color: $baby_blue,
+  weather_box_color: linear-gradient(90deg, $baby_blue, #83c8f6),
   // weather_box_color: linear-gradient(90deg, #b1c0d4, #4e71a9),
+  // weather_box_color: linear-gradient(90deg, #d1d9e4, #87b0f0),
   forecast_box_color: rgba($baby_blue, 0.7),
   text_color: $text_color,
-
-  placeholder_text_color: red,
-
   title_color: $title_color,
+
+  btn_color: $white,
+  btn_hover: $baby_blue,
+  btn_text: $black,
 );

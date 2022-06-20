@@ -19,7 +19,12 @@ function Forecast({ title, items }) {
             <p className={`${classes.forecast_title} ${classes[globalTheme]}`}>
               {`${item.title}`}
             </p>
-            <img src={iconUrlFromCode(item.icon)} style={{ width: 50 }} />
+            <img
+              src={iconUrlFromCode(item.icon)}
+              style={{ width: 50 }}
+              alt="weather icon"
+            />
+            {/* <img src={"./assets/svg/a_1_sunny.svg"} style={{ width: 50 }} /> */}
             {item.detail ? (
               <p
                 className={`${classes.forecast_detail} ${classes[globalTheme]}`}

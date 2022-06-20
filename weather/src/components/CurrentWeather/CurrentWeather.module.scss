@@ -50,11 +50,17 @@
 
       .date {
         display: flex;
-        gap: 10px;
+        flex-direction: column;
 
         .city_name {
           @include themify("color", "title_color");
           font-size: 1.5rem;
+          font-weight: 500;
+        }
+
+        .city_date {
+          @include themify("color", "title_color");
+          font-size: 1rem;
           font-weight: 500;
         }
       }
@@ -104,10 +110,12 @@
       }
       .description_container {
         .date {
-          gap: 5px;
-
           .city_name {
             font-size: 1rem;
+          }
+
+          .city_date {
+            font-size: 0.8rem;
           }
         }
 
@@ -121,7 +129,7 @@
 
 @media (max-width: 47em) {
   .weather_box {
-    // height: 30rem;
+    height: 20rem;
     // justify-content: flex-start;
 
     // grid-template-columns: 1fr;
@@ -140,19 +148,23 @@
 
     .weather_info {
       .temperature {
-        font-size: 2rem;
+        font-size: 3rem;
       }
       .description_container {
         .date {
           flex-direction: column;
 
           .city_name {
-            font-size: 0.8rem;
+            font-size: 1rem;
+          }
+
+          .city_date {
+            font-size: 1rem;
           }
         }
 
         .weather_description {
-          font-size: 1rem;
+          font-size: 1.5rem;
         }
       }
     }
