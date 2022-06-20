@@ -1,21 +1,58 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
+import {
+  UilArrowUp,
+  UilArrowDown,
+  UilTemperature,
+  UilTear,
+  UilWind,
+  UilSun,
+  UilSunset,
+} from "@iconscout/react-unicons";
 import classes from "./CurrentWeather.module.scss";
 import WeatherIcon from "../WeatherIcon";
 import { ThemeContext } from "../../ThemeContextParent";
 import { formatToLocalTime } from "../../services/weatherService";
 
 function CurrentWeather({
-  weather: { temp, description, main, dt, timezone, name, country, icon },
+  weather: {
+    temp,
+    description,
+    main,
+    dt,
+    timezone,
+    name,
+    country,
+    icon,
+    temp_min,
+    temp_max,
+    sunrise,
+    sunset,
+    speed,
+    current: { uvi },
+    humidity,
+    feels_like,
+  },
+  units,
 }) {
   const { globalTheme } = useContext(ThemeContext);
 
   return (
     <div className={`${classes.weather_box} ${classes[globalTheme]}`}>
-      <div className={classes.weather_info}>
-        <div className={classes.temperature}>{`${temp.toFixed()}°`}</div>
-        <div className={classes.description_container}>
-          <div className={classes.weather_description}>{`${description}`}</div>
-          <h1 className={classes.city_name}>{`${name}-${icon}`}</h1>
+      <div className={`${classes.weather_info} ${classes[globalTheme]}`}>
+        <div className={`${classes.temperature} ${classes[globalTheme]}`}>
+          {`${temp.toFixed()}°`}
+        </div>
+        <div
+          className={`${classes.description_container} ${classes[globalTheme]}`}
+        >
+          <div
+            className={`${classes.weather_description} ${classes[globalTheme]}`}
+          >
+            {`${description}`}
+          </div>
+          <h1 className={`${classes.city_name} ${classes[globalTheme]}`}>
+            {`${name}-${country}`}
+          </h1>
         </div>
         {formatToLocalTime(dt, timezone, "HH:mm")}
         <br />
@@ -25,8 +62,11 @@ function CurrentWeather({
       <div className={classes.city_info}>
         <div className={classes.icon_container}>
           <WeatherIcon code={icon} />
-          {/* <PartlyCloudy />{" "} */}
         </div>
+      </div>
+
+      <div className={`${classes.weather_details} ${classes[globalTheme]}`}>
+        ss
       </div>
     </div>
   );

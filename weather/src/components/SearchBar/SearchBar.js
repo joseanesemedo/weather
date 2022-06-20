@@ -1,11 +1,7 @@
 import React, { useContext, useState } from "react";
-import axios from "axios";
-
-import classes from "./SearchBar.module.scss";
-
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
-
 import { ThemeContext } from "../../ThemeContextParent";
+import classes from "./SearchBar.module.scss";
 
 const SearchBar = ({ setQuery, units, setUnits }) => {
   const { globalTheme } = useContext(ThemeContext);
