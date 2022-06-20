@@ -96,10 +96,35 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 60em) {
   .weather_box {
-    height: 40rem;
-    grid-template-columns: 1fr;
+    .weather_info {
+      .temperature {
+        font-size: 5rem;
+      }
+      .description_container {
+        .date {
+          gap: 5px;
+
+          .city_name {
+            font-size: 1rem;
+          }
+        }
+
+        .weather_description {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 47em) {
+  .weather_box {
+    height: 30rem;
+    justify-content: flex-start;
+
+    // grid-template-columns: 1fr;
   }
 
   // .icon_container {
@@ -107,6 +132,29 @@
   //   right: 15%;
   //   top: -10%;
   // }
+}
+
+@media (max-width: 560px) {
+  .weather_box {
+    .weather_info {
+      .temperature {
+        font-size: 2.5rem;
+      }
+      .description_container {
+        .date {
+          gap: 5px;
+
+          .city_name {
+            font-size: 0.8rem;
+          }
+        }
+
+        .weather_description {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
 }
 
 // @keyframes float {

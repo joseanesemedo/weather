@@ -32,7 +32,7 @@ const Home = () => {
     fetchWeather();
   }, [query, units]);
 
-  console.log(weather);
+  // console.log(weather);
 
   return (
     <main className={`${classes.home} ${classes[globalTheme]}`}>
