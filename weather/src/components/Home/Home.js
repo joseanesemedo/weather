@@ -15,6 +15,7 @@ const Home = () => {
   const [query, setQuery] = useState({ q: "porto" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   // fetch data and reload every time query or unit changes
   useEffect(() => {

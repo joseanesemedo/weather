@@ -46,7 +46,9 @@ function CurrentWeather({
           <div className={classes.weather_description}>{`${description}`}</div>
           <h1 className={classes.city_name}>{`${name}-${icon}`}</h1>
         </div>
-        {formatToLocalTime(dt, timezone, "HH:mm a")}
+        {formatToLocalTime(dt, timezone, "HH:mm")}
+        <br />
+        {formatToLocalTime(dt, timezone, "cccc, dd")}
       </div>
 
       <div className={classes.city_info}>
