@@ -2,13 +2,22 @@
 
 $night: (
   background_color: (
-    url(../assets/Clouds-200s.svg) repeat,
-    url(../assets/nightsky.svg) repeat,
-    linear-gradient(to bottom, #1f6cd8, #8d94ee, #bda1e1, #ea9fa8, #c66496)
-      fixed,
+    url(../assets/clouds_night.svg) repeat,
+    url(../assets/nightsky_md.svg) repeat,
+    linear-gradient(to bottom, #020d18, #15366f) fixed,
   ),
-  searchbar_color: #aea,
-  weather_box_color: #1f6cd8,
-  text_color: $white,
-  title_color: $white,
+  background_color_wide: (
+    url(../assets/clouds_night.svg) repeat,
+    url(../assets/nightsky.svg) repeat,
+    linear-gradient(to bottom, #020d18, #15366f) fixed,
+  ),
+  searchbar_color: #515884,
+  weather_box_color: linear-gradient(90deg, #0f264e, #071a32),
+  forecast_box_color: rgba(#051a33, 0.8),
+  text_color: #79a4cf,
+  title_color: #8199b2,
+
+  btn_color: #051a33,
+  btn_hover: $baby_blue,
+  btn_text: $white,
 );
