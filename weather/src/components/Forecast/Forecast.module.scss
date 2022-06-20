@@ -35,7 +35,7 @@
   .forecast_box {
     display: flex;
     height: 10rem;
-    padding: 10px 15px;
+    // padding: 10px 15px;
     // gap: 15px;
     justify-content: space-between;
 
@@ -80,5 +80,43 @@
 
   .centered {
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 35em) {
+  .forecast_container {
+    border-radius: 25px;
+    padding: 10px 25px;
+
+    @include themify("background", "forecast_box_color");
+    background-size: auto;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+
+    .title {
+      line-height: 2;
+      font-size: 1.2rem;
+      font-weight: 600;
+      @include themify("color", "title_color");
+    }
+
+    .forecast_box {
+      height: 10rem;
+
+      .forecast {
+        min-width: 80px;
+
+        .forecast_title {
+          font-size: 1rem;
+        }
+
+        .forecast_detail {
+          font-size: 1rem;
+        }
+
+        .forecast_temp {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 }
