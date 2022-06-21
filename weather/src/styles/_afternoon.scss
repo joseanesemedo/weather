@@ -2,47 +2,20 @@
 
 $afternoon: (
   background_color: (
-    url(../assets/clouds_sunset.svg) repeat,
-    linear-gradient(
-        0deg,
-        hsl(13deg 51% 56%) 0%,
-        hsl(8deg 58% 57%) 1%,
-        hsl(4deg 66% 57%) 3%,
-        hsl(360deg 73% 57%) 6%,
-        hsl(342deg 68% 60%) 10%,
-        hsl(324deg 63% 63%) 14%,
-        hsl(307deg 57% 66%) 20%,
-        hsl(295deg 53% 62%) 27%,
-        hsl(283deg 48% 58%) 36%,
-        hsl(271deg 44% 55%) 48%,
-        hsl(252deg 57% 51%) 63%,
-        hsl(234deg 70% 48%) 81%,
-        hsl(215deg 82% 44%) 100%
-      )
-      fixed,
+    url(../assets/clouds_md.svg) repeat,
+    linear-gradient(to bottom, #4150b2, #986aac, #f18671, #f6c778) fixed,
   ),
   background_color_wide: (
     url(../assets/clouds_bg.svg) repeat,
-    linear-gradient(
-        0deg,
-        hsl(13deg 51% 56%) 0%,
-        hsl(8deg 58% 57%) 1%,
-        hsl(4deg 66% 57%) 3%,
-        hsl(360deg 73% 57%) 6%,
-        hsl(342deg 68% 60%) 10%,
-        hsl(324deg 63% 63%) 14%,
-        hsl(307deg 57% 66%) 20%,
-        hsl(295deg 53% 62%) 27%,
-        hsl(283deg 48% 58%) 36%,
-        hsl(271deg 44% 55%) 48%,
-        hsl(252deg 57% 51%) 63%,
-        hsl(234deg 70% 48%) 81%,
-        hsl(215deg 82% 44%) 100%
-      )
-      fixed,
+    linear-gradient(to bottom, #4150b2, #986aac, #f18671, #f6c778) fixed,
   ),
-  searchbar_color: rgb(244, 228, 209),
-  weather_box_color: hsl(345deg 25% 56%),
-  text_color: $text_color,
-  title_color: $title_color,
+  searchbar_color: #6c6cbb,
+
+  weather_box_color: linear-gradient(90deg, #ad88bd, #5462ba),
+  forecast_box_color: rgba(#8d96d1, 0.7),
+  text_color: #eceef7,
+  title_color: #d9dcf0,
+  btn_color: #6c6cbb,
+  btn_hover: #5462ba,
+  btn_text: #eceef7,
 );
