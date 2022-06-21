@@ -3,6 +3,9 @@ import Sun from "../assets/icons/Sun";
 import PartlyCloudy from "../assets/icons/PartlyCloudy";
 import Cloudy from "../assets/icons/Cloudy";
 import Cloud from "../assets/icons/Cloud";
+import Rain from "../assets/icons/Rain";
+
+import classes from "./WeatherIcon.module.scss";
 
 const WeatherIcon = (props) => {
   let Icon;
@@ -20,37 +23,37 @@ const WeatherIcon = (props) => {
 
     // scattered clouds
     case "03d":
-      Icon = <Cloud />;
+      Icon = <Cloud className={classes.float} />;
       break;
 
     // broken clouds
     case "04d":
-      Icon = <Cloudy />;
+      Icon = <Cloudy className={classes.float} />;
       break;
 
     // shower rain
     case "09d":
-      Icon = <Cloudy />;
+      Icon = <Cloudy className={classes.float} />;
       break;
 
     // rain
     case "10d":
-      Icon = <Cloudy />;
+      Icon = <Rain className={classes.float} />;
       break;
 
     // thunderstorm
     case "11d":
-      Icon = <Cloudy />;
+      Icon = <Cloudy className={classes.float} />;
       break;
 
     // snow
     case "13d":
-      Icon = <Cloudy />;
+      Icon = <Cloudy className={classes.float} />;
       break;
 
     // mist
     case "50d":
-      Icon = <Cloudy />;
+      Icon = <Cloudy className={classes.float} />;
       break;
 
     default:

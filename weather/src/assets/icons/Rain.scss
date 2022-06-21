@@ -1,0 +1,116 @@
+@use "../../styles/variables" as *;
+
+.container {
+  position: relative;
+
+  .rain {
+    position: relative;
+    display: flex;
+    z-index: 9;
+    padding: 0px 20px;
+    transform: rotateZ(-10deg);
+  }
+
+  .rain span {
+    position: relative;
+    bottom: 0;
+    width: 10px;
+    height: 20px;
+    background: #4076d970;
+
+    margin: 0 2px;
+    border-radius: 25px;
+    animation: animate 3s linear infinite;
+    animation-duration: calc(15s / var(--i));
+    transform-origin: bottom;
+  }
+
+  .rain span:nth-child(1) {
+    --i: 11;
+  }
+  .rain span:nth-child(2) {
+    --i: 12;
+  }
+  .rain span:nth-child(3) {
+    --i: 10;
+  }
+  .rain span:nth-child(4) {
+    --i: 14;
+  }
+  .rain span:nth-child(5) {
+    --i: 18;
+  }
+  .rain span:nth-child(6) {
+    --i: 16;
+  }
+  .rain span:nth-child(7) {
+    --i: 19;
+  }
+  .rain span:nth-child(8) {
+    --i: 20;
+  }
+  .rain span:nth-child(9) {
+    --i: 19;
+  }
+  .rain span:nth-child(10) {
+    --i: 10;
+  }
+  .rain span:nth-child(11) {
+    --i: 16;
+  }
+  .rain span:nth-child(12) {
+    --i: 14;
+  }
+  .rain span:nth-child(13) {
+    --i: 18;
+  }
+  .rain span:nth-child(14) {
+    --i: 11;
+  }
+  .rain span:nth-child(15) {
+    --i: 13;
+  }
+  .rain span:nth-child(16) {
+    --i: 15;
+  }
+  .rain span:nth-child(17) {
+    --i: 12;
+  }
+  .rain span:nth-child(18) {
+    --i: 17;
+  }
+  .rain span:nth-child(19) {
+    --i: 13;
+  }
+  .rain span:nth-child(20) {
+    --i: 15;
+  }
+  .rain span:nth-child(21) {
+    --i: 13;
+  }
+  .rain span:nth-child(22) {
+    --i: 18;
+  }
+  .rain span:nth-child(23) {
+    --i: 16;
+  }
+  .rain span:nth-child(24) {
+    --i: 13;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    70% {
+      transform: translateY(150px) scale(1);
+    }
+    100% {
+      /* disappear :O */
+      transform: translateY(180px) scale(0);
+    }
+  }
+
+  //   .icon__shadow {
+  //   }
+}
