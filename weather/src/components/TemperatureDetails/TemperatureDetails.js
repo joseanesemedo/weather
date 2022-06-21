@@ -78,9 +78,12 @@ const TemperatureDetails = ({
           />
           <p className={`${classes[globalTheme]}`}>Sunrise</p>
           <span className={`${classes[globalTheme]}`}>
-            {formatToLocalTime(sunrise, timezone, "HH:mm")}
+            {units === "metric"
+              ? formatToLocalTime(sunrise, timezone, "HH:mm")
+              : formatToLocalTime(sunrise, timezone, "hh:mm a")}
           </span>
         </div>
+
         <div className={`${classes.weather_detail} ${classes[globalTheme]}`}>
           <UilSunset
             size={20}
@@ -88,7 +91,9 @@ const TemperatureDetails = ({
           />
           <p className={`${classes[globalTheme]}`}>Sunset</p>
           <span className={`${classes[globalTheme]}`}>
-            {formatToLocalTime(sunset, timezone, "HH:mm")}
+            {units === "metric"
+              ? formatToLocalTime(sunset, timezone, "HH:mm")
+              : formatToLocalTime(sunset, timezone, "hh:mm a")}
           </span>
         </div>
         <div className={`${classes.weather_detail} ${classes[globalTheme]}`}>

@@ -63,6 +63,14 @@
           font-size: 1rem;
           font-weight: 500;
         }
+
+        .city_time {
+          @include themify("color", "title_color");
+          font-size: 1rem;
+          font-weight: 500;
+          display: flex;
+          gap: 5px;
+        }
       }
 
       .weather_description {
@@ -117,6 +125,10 @@
           .city_date {
             font-size: 0.8rem;
           }
+
+          .city_time {
+            font-size: 0.8rem;
+          }
         }
 
         .weather_description {
@@ -159,6 +171,10 @@
           }
 
           .city_date {
+            font-size: 1rem;
+          }
+
+          .city_time {
             font-size: 1rem;
           }
         }
