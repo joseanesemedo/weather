@@ -9,15 +9,12 @@ $day: (
     url(../assets/clouds_bg.svg) repeat,
     linear-gradient(to bottom, $bg_light_blue, $bg_blue) fixed,
   ),
-  searchbar_color: $baby_blue,
+  searchbar_color: #a0d5f9,
 
-  weather_box_color: linear-gradient(90deg, $baby_blue, #83c8f6),
-  // weather_box_color: linear-gradient(90deg, #b1c0d4, #4e71a9),
-  // weather_box_color: linear-gradient(90deg, #d1d9e4, #87b0f0),
-  forecast_box_color: rgba($baby_blue, 0.7),
-  text_color: $text_color,
-  title_color: $title_color,
-
+  weather_box_color: linear-gradient(-70deg, #c3e6f9, #5bb7f4),
+  forecast_box_color: rgba(#aedefe, 0.7),
+  text_color: #f6f8fb,
+  title_color: #f6f8fb,
   forecast_title_color: $title_color,
   forecast_text_color: $text_color,
 

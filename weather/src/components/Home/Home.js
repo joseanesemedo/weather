@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <main className={`${classes.home} ${classes[globalTheme]}`}>
       <div className={classes.container}>
-        <Header />
+        {/* <Header /> */}
         {loading ? <Loading /> : <></>}
         <SearchBar setQuery={setQuery} units={units} setUnits={setUnits} />
         {weather && (
