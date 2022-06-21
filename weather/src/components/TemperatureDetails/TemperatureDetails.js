@@ -97,10 +97,6 @@ const TemperatureDetails = ({
           </span>
         </div>
         <div className={`${classes.weather_detail} ${classes[globalTheme]}`}>
-          <UilSun
-            size={20}
-            className={`${classes.weather_details_icon} ${classes[globalTheme]}`}
-          />
           <p className={`${classes[globalTheme]}`}>UVI</p>
           <span className={`${classes[globalTheme]}`}>
             {`${uvi.toFixed()}`}

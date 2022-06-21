@@ -2,11 +2,11 @@
 
 $rain: (
   background_color: (
-    url(../assets/clouds_md.svg) repeat,
+    url(../assets/backgrounds/cloudy_md.svg) repeat,
     linear-gradient(to bottom, #87b0f0, #b1c0d4) fixed,
   ),
   background_color_wide: (
-    url(../assets/cloudy.svg) repeat,
+    url(../assets/backgrounds/cloudy_bg.svg) repeat,
     linear-gradient(to bottom, #4e71a9, #b1c0d4) fixed,
   ),
   searchbar_color: #849fc1,
