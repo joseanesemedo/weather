@@ -50,14 +50,14 @@ function CurrentWeather({
             <h1 className={`${classes.city_date} ${classes[globalTheme]}`}>
               {formatToLocalTime(dt, timezone, "cccc, dd LLLL")}
             </h1>
-            <p className={`${classes.city_time} ${classes[globalTheme]}`}>
+            <div className={`${classes.city_time} ${classes[globalTheme]}`}>
               <p>Current time:</p>
               <p>
                 {units === "metric"
                   ? formatToLocalTime(dt, timezone, "HH:mm")
                   : formatToLocalTime(dt, timezone, "hh:mm a")}
               </p>
-            </p>
+            </div>
           </div>
         </div>
       </div>

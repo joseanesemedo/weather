@@ -56,6 +56,7 @@ const WeatherIcon = (props) => {
       Icon = <Cloudy className={classes.float} />;
       break;
 
+    // TODO add night
     default:
       Icon = <PartlyCloudy />;
       break;
