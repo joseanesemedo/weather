@@ -3,6 +3,7 @@ import React, { createContext, useState } from "react";
 export const DAY_THEME = "day";
 export const AFTERNOON_THEME = "afternoon";
 export const NIGHT_THEME = "night";
+export const RAIN_THEME = "rain";
 
 export const ThemeContext = createContext({
   globalTheme: "",

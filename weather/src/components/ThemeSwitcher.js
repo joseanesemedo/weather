@@ -4,6 +4,7 @@ import {
   DAY_THEME,
   AFTERNOON_THEME,
   NIGHT_THEME,
+  RAIN_THEME,
   ThemeContext,
 } from "../ThemeContextParent";
 

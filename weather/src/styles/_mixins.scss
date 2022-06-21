@@ -2,11 +2,13 @@
 @import "./day.scss";
 @import "./afternoon.scss";
 @import "./night.scss";
+@import "./rain.scss";
 
 $themes: (
   day: $day,
   afternoon: $afternoon,
   night: $night,
+  rain: $rain,
 );
 
 @mixin themify($property, $key) {

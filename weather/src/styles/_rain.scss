@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+$rain: (
+  background_color: (
+    url(../assets/clouds_md.svg) repeat,
+    linear-gradient(to bottom, #87b0f0, #b1c0d4) fixed,
+  ),
+  background_color_wide: (
+    url(../assets/cloudy.svg) repeat,
+    linear-gradient(to bottom, #4e71a9, #b1c0d4) fixed,
+  ),
+  searchbar_color: #849fc1,
+
+  weather_box_color: linear-gradient(90deg, #b1c0d4, #4e71a9),
+  forecast_box_color: rgba(#b1c0d4, 0.7),
+  text_color: #ededed,
+  title_color: #fff,
+
+  forecast_title_color: #4e71a9,
+  forecast_text_color: #4e71a9,
+
+  btn_color: $white,
+  btn_hover: $baby_blue,
+  btn_text: $black,
+);

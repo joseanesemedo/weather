@@ -29,7 +29,7 @@
     line-height: 2;
     font-size: 1.2rem;
     font-weight: 600;
-    @include themify("color", "title_color");
+    @include themify("color", "forecast_title_color");
   }
 
   .forecast_box {
@@ -62,18 +62,18 @@
       .forecast_title {
         font-size: 1.2rem;
         font-weight: 500;
-        @include themify("color", "text_color");
+        @include themify("color", "forecast_text_color");
       }
 
       .forecast_detail {
         font-size: 1.2rem;
         font-weight: 600;
-        @include themify("color", "title_color");
+        @include themify("color", "forecast_title_color");
       }
 
       .forecast_temp {
         font-size: 1.2rem;
-        @include themify("color", "text_color");
+        @include themify("color", "forecast_text_color");
       }
     }
   }
