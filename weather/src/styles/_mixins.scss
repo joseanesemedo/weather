@@ -1,6 +1,7 @@
 @use "./variables" as *;
 @import "./day.scss";
 @import "./cloudy_day.scss";
+@import "./cloudy_night.scss";
 @import "./afternoon.scss";
 @import "./night.scss";
 @import "./rain.scss";
@@ -8,6 +9,7 @@
 $themes: (
   day: $day,
   cloudy_day: $cloudy_day,
+  cloudy_night: $cloudy_night,
   afternoon: $afternoon,
   night: $night,
   rain: $rain,

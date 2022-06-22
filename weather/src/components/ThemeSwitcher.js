@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import { formatToLocalTime } from "../services/weatherService";
+// import { formatToLocalTime } from "../services/weatherService";
 import {
   DAY_THEME,
   CLOUDY_DAY_THEME,
   AFTERNOON_THEME,
+  CLOUDY_NIGHT_THEME,
   NIGHT_THEME,
   RAIN_THEME,
   ThemeContext,
@@ -25,12 +26,15 @@ const ThemeSwitcher = ({ weather: { dt, timezone, id, icon } }) => {
         break;
 
       case "02d":
-      case "02n":
       case "03d":
-      case "03n":
       case "04d":
-      case "04n":
         setGlobalTheme(CLOUDY_DAY_THEME);
+        break;
+
+      case "02n":
+      case "03n":
+      case "04n":
+        setGlobalTheme(CLOUDY_NIGHT_THEME);
         break;
 
       case "09d":
@@ -44,6 +48,10 @@ const ThemeSwitcher = ({ weather: { dt, timezone, id, icon } }) => {
       case "50d":
       case "50n":
         setGlobalTheme(RAIN_THEME);
+        break;
+
+      default:
+        setGlobalTheme(DAY_THEME);
         break;
     }
     // if (Number(time) > 6 && Number(time) <= 15) {
