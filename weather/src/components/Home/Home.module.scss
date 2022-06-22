@@ -8,7 +8,7 @@
   padding: 3.25rem 2.5rem;
 
   min-height: 100vh;
-  @include themify("background", "background_color");
+  @include themify("background", "background_color_wide");
   background-size: auto;
   transition: all 0.2s;
 
@@ -32,12 +32,14 @@
   }
 }
 
-@media (min-width: 98em) {
+@media (max-width: 100em) {
   .home {
-    @include themify("background", "background_color_wide");
+    @include themify("background", "background_color");
+  }
+}
 
-    // .container {
-    //   max-width: 60rem;
-    // }
+@media (max-width: 47em) {
+  .home {
+    @include themify("background", "background_color_small");
   }
 }

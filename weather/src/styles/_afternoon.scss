@@ -9,6 +9,10 @@ $afternoon: (
     url(../assets/backgrounds/clouds_bg.svg) repeat,
     linear-gradient(to bottom, #4150b2, #986aac, #f18671, #f6c778) fixed,
   ),
+  background_color_small: (
+    url(../assets/clouds_md.svg) repeat,
+    linear-gradient(to bottom, #4150b2, #986aac, #f18671, #f6c778) fixed,
+  ),
   searchbar_color: #6c6cbb,
 
   weather_box_color: linear-gradient(90deg, #ad88bd, #5462ba),

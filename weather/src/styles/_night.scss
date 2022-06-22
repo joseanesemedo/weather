@@ -6,6 +6,11 @@ $night: (
     url(../assets/nightsky_md.svg) repeat,
     linear-gradient(to bottom, #020d18, #15366f) fixed,
   ),
+  background_color_small: (
+    url(../assets/clouds_night.svg) repeat,
+    url(../assets/nightsky_md.svg) repeat,
+    linear-gradient(to bottom, #020d18, #15366f) fixed,
+  ),
   background_color_wide: (
     url(../assets/clouds_night.svg) repeat,
     url(../assets/nightsky.svg) repeat,

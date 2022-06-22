@@ -25,7 +25,7 @@ const formatCurrentWeather = (data) => {
     wind: { speed },
   } = data;
 
-  const { main, description, icon } = weather[0];
+  const { main, description, icon, id } = weather[0];
 
   return {
     lat,
@@ -43,6 +43,7 @@ const formatCurrentWeather = (data) => {
     main,
     description,
     icon,
+    id,
     speed,
   };
 };
