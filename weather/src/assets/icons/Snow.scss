@@ -1,0 +1,114 @@
+@use "../../styles/variables" as *;
+
+.container {
+  position: relative;
+
+  .snow {
+    position: relative;
+    display: flex;
+    z-index: 9;
+  }
+
+  .snow span {
+    position: relative;
+    bottom: 0;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.8);
+
+    margin: 0 2px;
+    border-radius: 25px;
+    animation: animate 3s linear infinite;
+    animation-duration: calc(20s / var(--i));
+    transform-origin: bottom;
+  }
+
+  .snow span:nth-child(1) {
+    --i: 11;
+  }
+  .snow span:nth-child(2) {
+    --i: 12;
+  }
+  .snow span:nth-child(3) {
+    --i: 10;
+  }
+  .snow span:nth-child(4) {
+    --i: 14;
+  }
+  .snow span:nth-child(5) {
+    --i: 18;
+  }
+  .snow span:nth-child(6) {
+    --i: 16;
+  }
+  .snow span:nth-child(7) {
+    --i: 19;
+  }
+  .snow span:nth-child(8) {
+    --i: 20;
+  }
+  .snow span:nth-child(9) {
+    --i: 19;
+  }
+  .snow span:nth-child(10) {
+    --i: 10;
+  }
+  .snow span:nth-child(11) {
+    --i: 16;
+  }
+  .snow span:nth-child(12) {
+    --i: 14;
+  }
+  .snow span:nth-child(13) {
+    --i: 18;
+  }
+  .snow span:nth-child(14) {
+    --i: 11;
+  }
+  .snow span:nth-child(15) {
+    --i: 13;
+  }
+  .snow span:nth-child(16) {
+    --i: 15;
+  }
+  .snow span:nth-child(17) {
+    --i: 12;
+  }
+  .snow span:nth-child(18) {
+    --i: 17;
+  }
+  .snow span:nth-child(19) {
+    --i: 13;
+  }
+  .snow span:nth-child(20) {
+    --i: 15;
+  }
+  .snow span:nth-child(21) {
+    --i: 13;
+  }
+  .snow span:nth-child(22) {
+    --i: 18;
+  }
+  .snow span:nth-child(23) {
+    --i: 16;
+  }
+  .snow span:nth-child(24) {
+    --i: 13;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    70% {
+      transform: translateY(150px) scale(1);
+    }
+    100% {
+      /* disappear :O */
+      transform: translateY(180px) scale(0);
+    }
+  }
+
+  //   .icon__shadow {
+  //   }
+}

@@ -4,6 +4,7 @@ import PartlyCloudy from "../assets/icons/PartlyCloudy";
 import Cloudy from "../assets/icons/Cloudy";
 import Cloud from "../assets/icons/Cloud";
 import Rain from "../assets/icons/Rain";
+import Snow from "../assets/icons/Snow";
 
 import classes from "./WeatherIcon.module.scss";
 
@@ -11,7 +12,7 @@ const WeatherIcon = (props) => {
   let Icon;
 
   switch (props.code) {
-    // clear sky
+    // clear sky day
     case "01d":
       Icon = <Sun />;
       break;
@@ -48,7 +49,7 @@ const WeatherIcon = (props) => {
 
     // snow
     case "13d":
-      Icon = <Cloudy className={classes.float} />;
+      Icon = <Snow className={classes.float} />;
       break;
 
     // mist
