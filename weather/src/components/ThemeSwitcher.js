@@ -19,7 +19,7 @@ const ThemeSwitcher = ({ weather: { dt, timezone } }) => {
     } else if (Number(time) > 15 && Number(time) < 19) {
       setGlobalTheme(AFTERNOON_THEME);
     } else {
-      setGlobalTheme(RAIN_THEME);
+      setGlobalTheme(NIGHT_THEME);
     }
   }, [setGlobalTheme, time]);
 

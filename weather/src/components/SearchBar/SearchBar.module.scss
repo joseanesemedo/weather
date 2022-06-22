@@ -31,7 +31,7 @@
     // }
   }
 
-  .input {
+  input {
     width: 100%;
     font-size: 1.4rem;
     @include themify("color", "title_color");
@@ -42,7 +42,7 @@
     &::placeholder {
       font-size: 1.2rem;
       text-transform: lowercase;
-      @include themify("color", "placeholder_text_color");
+      color: #fff;
     }
 
     &:focus {
