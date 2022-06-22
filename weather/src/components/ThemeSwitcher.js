@@ -10,7 +10,7 @@ import {
   ThemeContext,
 } from "../ThemeContextParent";
 
-const ThemeSwitcher = ({ weather: { dt, timezone, id, icon } }) => {
+const ThemeSwitcher = ({ weather: { dt, timezone, icon } }) => {
   const { setGlobalTheme } = useContext(ThemeContext);
 
   let time = formatToLocalTime(dt, timezone, "HH");

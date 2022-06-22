@@ -29,6 +29,7 @@ const SearchBar = ({ setQuery, units, setUnits }) => {
         let lon = position.coords.longitude;
 
         setQuery({ lat, lon });
+        setCity("");
       });
     }
   };

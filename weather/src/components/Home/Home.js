@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import classes from "./Home.module.scss";
 import SearchBar from "../SearchBar/SearchBar";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
-import Header from "../Header/Header";
+// import Header from "../Header/Header";
 import Forecast from "../Forecast/Forecast";
 import ThemeSwitcher from "../ThemeSwitcher";
 import Loading from "../UI/Loading";
@@ -21,7 +21,6 @@ const Home = () => {
   // fetch data and reload every time query or unit changes
   useEffect(() => {
     setLoading(true);
-
     const fetchWeather = async () => {
       await getFormattedWeatherData({ ...query, units }).then((data) => {
         setLoading(false);

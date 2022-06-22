@@ -64,3 +64,15 @@
     transform: scale(1);
   }
 }
+
+@media (max-width: 47em) {
+  .icon__cloud {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 35em) {
+  .icon__cloud {
+    transform: scale(0.6);
+  }
+}

@@ -16,14 +16,7 @@
   justify-content: center;
   gap: 10px;
 
-  // display: grid;
-  // grid-template-columns: 2fr 1fr;
-  // gap: 20px;
-
   .city_info {
-    // display: flex;
-    // flex-direction: column;
-
     .icon_container {
       position: absolute;
       right: 10%;
@@ -36,7 +29,6 @@
     align-items: center;
     gap: 1rem;
     padding: 0 20px;
-    // background: pink;
 
     .temperature {
       @include themify("color", "title_color");
@@ -112,6 +104,14 @@
 
 @media (max-width: 60em) {
   .weather_box {
+    .city_info {
+      .icon_container {
+        position: absolute;
+        right: 5%;
+        top: -20%;
+      }
+    }
+
     .weather_info {
       .temperature {
         font-size: 5rem;
@@ -141,24 +141,33 @@
 
 @media (max-width: 47em) {
   .weather_box {
-    height: 20rem;
-    // justify-content: flex-start;
-
-    // grid-template-columns: 1fr;
+    .city_info {
+      .icon_container {
+        position: absolute;
+        right: -5%;
+        top: -25%;
+      }
+    }
   }
-
-  // .icon_container {
-  //   position: absolute;
-  //   right: 15%;
-  //   top: -10%;
-  // }
 }
 
 @media (max-width: 35em) {
   .weather_box {
-    height: 30rem;
+    height: 40rem;
+
+    .city_info {
+      .icon_container {
+        position: absolute;
+        right: -10%;
+        top: -10%;
+      }
+    }
 
     .weather_info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+
       .temperature {
         font-size: 3rem;
       }
