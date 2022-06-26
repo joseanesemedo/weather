@@ -41,7 +41,7 @@ function CurrentWeather({
           <div
             className={`${classes.weather_description} ${classes[globalTheme]}`}
           >
-            {`${description}`}
+            {`${main}`}
           </div>
           <div className={`${classes.date} ${classes[globalTheme]}`}>
             <h1 className={`${classes.city_name} ${classes[globalTheme]}`}>

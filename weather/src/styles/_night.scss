@@ -1,5 +1,3 @@
-@use "./variables" as *;
-
 $night: (
   background_color: (
     url(../assets/clouds_night.svg) repeat,
@@ -27,5 +25,5 @@ $night: (
 
   btn_color: #515884,
   btn_hover: #424767,
-  btn_text: $white,
+  btn_text: #fff,
 );

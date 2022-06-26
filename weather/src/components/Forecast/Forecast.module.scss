@@ -1,4 +1,3 @@
-@use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 
 ::-webkit-scrollbar {
@@ -8,13 +7,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba($title_color, 0.7);
+  background: rgba(#5a7cb3, 0.7);
   border-radius: 1.5rem;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba($title_color, 0.9);
+  background: rgba(#5a7cb3, 0.9);
 }
 
 .forecast_container {

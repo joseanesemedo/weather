@@ -1,5 +1,3 @@
-@use "./variables" as *;
-
 $rain: (
   background_color: (
     url(../assets/backgrounds/cloudy_md.svg) repeat,
@@ -23,7 +21,7 @@ $rain: (
   forecast_title_color: #4e71a9,
   forecast_text_color: #4e71a9,
 
-  btn_color: $white,
-  btn_hover: $baby_blue,
-  btn_text: $black,
+  btn_color: #fff,
+  btn_hover: rgba(226, 240, 251, 1),
+  btn_text: #000,
 );
