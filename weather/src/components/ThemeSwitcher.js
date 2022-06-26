@@ -17,7 +17,7 @@ const ThemeSwitcher = ({ weather: { dt, timezone, icon } }) => {
   let day_time;
   if (Number(time) > 6 && Number(time) <= 17) {
     day_time = "day";
-  } else if (Number(time) > 17 && Number(time) < 19) {
+  } else if (Number(time) > 17 && Number(time) <= 19) {
     day_time = "afternoon";
   } else {
     day_time = "night";
@@ -40,17 +40,16 @@ const ThemeSwitcher = ({ weather: { dt, timezone, icon } }) => {
       case "02d":
       case "03d":
       case "04d":
-        if (day_time === "day") {
-          setGlobalTheme(CLOUDY_DAY_THEME);
-        } else {
-          setGlobalTheme(AFTERNOON_THEME);
-        }
-        break;
-
       case "02n":
       case "03n":
       case "04n":
-        setGlobalTheme(CLOUDY_NIGHT_THEME);
+        if (day_time === "day") {
+          setGlobalTheme(CLOUDY_DAY_THEME);
+        } else if (day_time === "afternoon") {
+          setGlobalTheme(AFTERNOON_THEME);
+        } else {
+          setGlobalTheme(CLOUDY_NIGHT_THEME);
+        }
         break;
 
       case "09d":

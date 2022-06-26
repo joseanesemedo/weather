@@ -1,12 +1,15 @@
 $cloudy_day: (
   background_color: (
     url(../assets/backgrounds/sea_clouds_md.svg) repeat,
+    linear-gradient(to bottom, #c3e6f9, #31a1ec) fixed,
   ),
   background_color_wide: (
     url(../assets/backgrounds/sea_clouds_lg.svg) repeat,
+    linear-gradient(to bottom, #c3e6f9, #31a1ec) fixed,
   ),
   background_color_small: (
     url(../assets/backgrounds/sea_clouds_sm.svg) repeat,
+    linear-gradient(to bottom, #c3e6f9, #31a1ec) fixed,
   ),
   searchbar_color: #a0d5f9,
 

@@ -1,12 +1,15 @@
 $cloudy_night: (
   background_color: (
     url(../assets/backgrounds/cloudy_night_md.svg) repeat,
+    linear-gradient(to bottom, #020d18, #15366f) fixed,
   ),
   background_color_wide: (
     url(../assets/backgrounds/cloudy_night_bg.svg) repeat,
+    linear-gradient(to bottom, #020d18, #15366f) fixed,
   ),
   background_color_small: (
     url(../assets/backgrounds/cloudy_night_sm.svg) repeat,
+    linear-gradient(to bottom, #020d18, #15366f) fixed,
   ),
   searchbar_color: #494f77,
   weather_box_color: linear-gradient(90deg, #41466a, #292c42),

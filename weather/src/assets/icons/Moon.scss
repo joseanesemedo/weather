@@ -1,0 +1,15 @@
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon__moon {
+  height: 8rem;
+  width: 8rem;
+  background: linear-gradient(45deg, #e3e3e3 40%, #ffffff);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 0.625rem rgba(184, 109, 219, 0.4))
+    drop-shadow(0 0 1.875rem rgba(184, 109, 219, 0.4));
+  position: relative;
+}

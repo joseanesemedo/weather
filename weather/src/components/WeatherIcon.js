@@ -1,5 +1,6 @@
 import React from "react";
 import Sun from "../assets/icons/Sun";
+import Moon from "../assets/icons/Moon";
 import PartlyCloudy from "../assets/icons/PartlyCloudy";
 import Cloudy from "../assets/icons/Cloudy";
 import Cloud from "../assets/icons/Cloud";
@@ -19,7 +20,7 @@ const WeatherIcon = (props) => {
 
     // clear sky night
     case "01n":
-      Icon = <Sun />;
+      Icon = <Moon />;
       break;
 
     // few clouds
