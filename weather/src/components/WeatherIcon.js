@@ -17,6 +17,11 @@ const WeatherIcon = (props) => {
       Icon = <Sun />;
       break;
 
+    // clear sky night
+    case "01n":
+      Icon = <Sun />;
+      break;
+
     // few clouds
     case "02d":
       Icon = <PartlyCloudy />;
@@ -29,11 +34,9 @@ const WeatherIcon = (props) => {
 
     // broken clouds
     case "04d":
-      Icon = <Cloudy className={classes.float} />;
-      break;
-
-    // shower rain
+    case "04n":
     case "09d":
+    case "09n":
       Icon = <Cloudy className={classes.float} />;
       break;
 
